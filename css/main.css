@@ -1,3 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: black;
+  font-family: "Roboto";
+  text-decoration: none;
+  background-image: linear-gradient(to right, #757F9A, #D7DDE8);
+}
 
+.headerContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 30vh;
+  border: solid 1px black;
+  text-decoration: none;
+}
+.headerContainer .menuNavegacion {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  border: solid 1px black;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=main.css.map */
