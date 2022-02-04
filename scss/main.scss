@@ -6,7 +6,7 @@ body {
     color: black;
     font-family: 'Roboto';
     text-decoration: none;
-    background-image: linear-gradient(to right, #757F9A, #D7DDE8);
+    
     
 }
  
@@ -14,22 +14,49 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
     border: solid 1px black;
     text-decoration: none;
 
-& .menuNavegacion{
-    display: flex;
-    flex-flow: row wrap;
-    width: 100vw;
-    border: solid 1px black;
-    justify-content: space-evenly;
-    text-decoration: none;
-
-
-}
+    & ul.menuNavegacion{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 90vw;
+        font-size: 125%;
+        font-weight: 600;
+        
+     }
+     & ul{list-style:none;
+       margin:0px;
+       padding:0px;
+       clear:both;
+     }
+   
+     & li{
+     margin:0px 10px;
+     padding:0px;
+     float:left;
+     }
+   
+ 
+     & li a{
+     display:block;
+     text-decoration:none;
+     }
+   
+ 
+     & ul li a{
+     position: relative;
+     color: black;
+     font-weight:bold;
+     -ms-interpolation-mode: inherit;
+     }
+ 
+     
     
 
 }

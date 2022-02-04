@@ -6,26 +6,47 @@ body {
   color: black;
   font-family: "Roboto";
   text-decoration: none;
-  background-image: linear-gradient(to right, #757F9A, #D7DDE8);
 }
 
 .headerContainer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100vw;
-  height: 30vh;
+  height: 40vh;
   border: solid 1px black;
   text-decoration: none;
 }
-.headerContainer .menuNavegacion {
+.headerContainer ul.menuNavegacion {
   display: flex;
-  flex-flow: row wrap;
-  width: 100vw;
-  border: solid 1px black;
-  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90vw;
+  font-size: 125%;
+  font-weight: 600;
+}
+.headerContainer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+}
+.headerContainer li {
+  margin: 0px 10px;
+  padding: 0px;
+  float: left;
+}
+.headerContainer li a {
+  display: block;
   text-decoration: none;
+}
+.headerContainer ul li a {
+  position: relative;
+  color: black;
+  font-weight: bold;
+  -ms-interpolation-mode: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */
