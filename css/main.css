@@ -4,50 +4,198 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   color: black;
-  font-family: "Roboto";
+  font-family: "Gilda Display";
   text-decoration: none;
-  background-image: url();
 }
 
-.headerContainer {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100vw;
-  height: 40vh;
-  border: solid 1px black;
-  text-decoration: none;
+main {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 25vh 60vh 30vh 50vh 30vh;
+  border: 1px solid black;
 }
-.headerContainer ul.menuNavegacion {
+main .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+main .navbarContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 21vh;
   justify-content: space-around;
-  width: 90vw;
-  font-size: 125%;
-  font-weight: 600;
+  align-content: center;
 }
-.headerContainer ul {
+main .barraNavegacion {
+  display: flex;
+  flex-flow: row wrap;
+  width: 60vw;
+  justify-content: space-around;
   list-style: none;
-  margin: 0px;
-  padding: 0px;
-  clear: both;
+  align-content: center;
 }
-.headerContainer li {
-  margin: 0px 10px;
-  padding: 0px;
-  float: left;
-}
-.headerContainer li a {
-  display: block;
+main a {
   text-decoration: none;
-}
-.headerContainer ul li a {
-  position: relative;
   color: black;
-  font-weight: bold;
-  -ms-interpolation-mode: inherit;
+  font-size: 1.5rem;
+}
+main .carrousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main input[name=slider-select-element] {
+  display: none;
+}
+main #slider-arrows {
+  margin: 0 auto 0 auto;
+  width: 100%;
+}
+main #slider-box {
+  -moz-animation: autoSlider 15s infinite linear;
+  -o-animation: autoSlider 15s infinite linear;
+  -webkit-animation: autoSlider 15s infinite linear;
+  animation: autoSlider 15s infinite linear;
+  -webkit-transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease;
+  -ms-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+  height: 100%;
+  width: 300%;
+}
+main #slider-container {
+  height: 30%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+}
+main .element-uno,
+main .element-dos,
+main .element-tres,
+main .element-cuatro {
+  min-height: 370px;
+  max-height: 100%;
+  width: 100%;
+}
+main .element-uno {
+  background-image: url(../root/assets/img/portada4.JPG);
+  background-size: 100% 100%;
+  width: 100vw;
+}
+main .element-dos {
+  background-image: url(../root/assets/img/portada5.JPG);
+  background-size: 100% 100%;
+  width: 100vw;
+}
+main .element-tres {
+  background-image: url(../root/assets/img/portada6.JPG);
+  background-size: 100% 100%;
+  width: 100vw;
+}
+main .element-cuatro {
+  background-image: url(../root/assets/img/portada8.JPG);
+  background-size: 100% 100%;
+  width: 100vw;
+}
+main .slider-element {
+  float: left;
+  width: 22%;
+}
+@-moz-keyframes autoSlider {
+  0% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: 0;
+  }
+  35% {
+    margin-left: -100%;
+  }
+  65% {
+    margin-left: -100%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  95% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes autoSlider {
+  0% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: 0;
+  }
+  35% {
+    margin-left: -100%;
+  }
+  65% {
+    margin-left: -100%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  95% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes autoSlider {
+  0% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: 0;
+  }
+  35% {
+    margin-left: -100%;
+  }
+  65% {
+    margin-left: -100%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  95% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+main .textBienvenida {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .secciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+}
+main .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
 }
 
 /*# sourceMappingURL=main.css.map */
