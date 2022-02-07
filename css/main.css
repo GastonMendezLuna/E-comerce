@@ -12,7 +12,8 @@ main {
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 25vh 60vh 30vh 50vh 30vh;
-  border: 1px solid black;
+  justify-content: center;
+  justify-items: center;
 }
 main .container {
   display: flex;
@@ -41,7 +42,12 @@ main .barraNavegacion {
 main a {
   text-decoration: none;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+main .iconos {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 main .carrousel {
   display: flex;
@@ -61,13 +67,13 @@ main #slider-box {
   -o-animation: autoSlider 15s infinite linear;
   -webkit-animation: autoSlider 15s infinite linear;
   animation: autoSlider 15s infinite linear;
-  -webkit-transition: all 0.75s ease;
-  -moz-transition: all 0.75s ease;
-  -ms-transition: all 0.75s ease;
-  -o-transition: all 0.75s ease;
-  transition: all 0.75s ease;
+  -webkit-transition: all 0.99s ease;
+  -moz-transition: all 0.99s ease;
+  -ms-transition: all 0.99s ease;
+  -o-transition: all 0.99s ease;
+  transition: all 0.99s ease;
   height: 100%;
-  width: 300%;
+  width: 455%;
 }
 main #slider-container {
   height: 30%;
@@ -112,20 +118,26 @@ main .slider-element {
   0% {
     margin-left: 0;
   }
-  30% {
+  10% {
     margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
   }
   35% {
     margin-left: -100%;
   }
+  50% {
+    margin-left: -200%;
+  }
   65% {
-    margin-left: -100%;
-  }
-  70% {
     margin-left: -200%;
   }
-  95% {
-    margin-left: -200%;
+  75% {
+    margin-left: -300%;
+  }
+  85% {
+    margin-left: -300%;
   }
   100% {
     margin-left: 0;
@@ -135,20 +147,26 @@ main .slider-element {
   0% {
     margin-left: 0;
   }
-  30% {
+  10% {
     margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
   }
   35% {
     margin-left: -100%;
   }
+  50% {
+    margin-left: -200%;
+  }
   65% {
-    margin-left: -100%;
-  }
-  70% {
     margin-left: -200%;
   }
-  95% {
-    margin-left: -200%;
+  75% {
+    margin-left: -300%;
+  }
+  85% {
+    margin-left: -300%;
   }
   100% {
     margin-left: 0;
@@ -158,20 +176,26 @@ main .slider-element {
   0% {
     margin-left: 0;
   }
-  30% {
+  10% {
     margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
   }
   35% {
     margin-left: -100%;
   }
+  50% {
+    margin-left: -200%;
+  }
   65% {
-    margin-left: -100%;
-  }
-  70% {
     margin-left: -200%;
   }
-  95% {
-    margin-left: -200%;
+  75% {
+    margin-left: -300%;
+  }
+  85% {
+    margin-left: -300%;
   }
   100% {
     margin-left: 0;
@@ -179,23 +203,30 @@ main .slider-element {
 }
 main .textBienvenida {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  width: 80%;
+  height: auto;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  font-family: "Gilda Display";
+  font-size: 1.1rem;
+  line-height: 25px;
 }
 main .secciones {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  border: solid 1px black;
+  background-color: blue;
 }
 main .footer {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  border: solid 1px black;
+  background-color: cadetblue;
 }
 
 /*# sourceMappingURL=main.css.map */

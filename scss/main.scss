@@ -13,7 +13,9 @@ main {
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 25vh 60vh 30vh 50vh 30vh;
-  border: 1px solid black;
+  justify-content: center;
+  justify-items: center;
+  
 
   & .container{
     display: flex;
@@ -46,7 +48,14 @@ main {
   & a{
     text-decoration: none;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  & .iconos{
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      
   }
 
   & .carrousel{
@@ -54,6 +63,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   }
 
 
@@ -72,14 +82,14 @@ main {
     -webkit-animation: autoSlider 15s infinite linear;
     animation: autoSlider 15s infinite linear;
 
-    -webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    transition: all 0.75s ease;
+    -webkit-transition: all 0.99s ease;
+    -moz-transition: all 0.99s ease;
+    -ms-transition: all 0.99s ease;
+    -o-transition: all 0.99s ease;
+    transition: all 0.99s ease;
 
     height: 100%;
-    width: 300%;
+    width: 455%;
 }
 
 & #slider-container {
@@ -135,25 +145,34 @@ main {
         margin-left: 0;
     }
 
-    30% {
+    10% {
         margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
     }
 
     35% {
         margin-left: -100%;
     }
 
+    50% {
+        margin-left: -200%;
+    }
+
     65% {
-        margin-left: -100%;
-    }
-
-    70% {
         margin-left: -200%;
     }
 
-    95% {
-        margin-left: -200%;
+    75% {
+        margin-left: -300%;
     }
+
+    85% {
+        margin-left: -300%;
+    }
+    
 
     100% {
         margin-left: 0;
@@ -165,24 +184,32 @@ main {
         margin-left: 0;
     }
 
-    30% {
+    10% {
         margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
     }
 
     35% {
         margin-left: -100%;
     }
 
+    50% {
+        margin-left: -200%;
+    }
+
     65% {
-        margin-left: -100%;
-    }
-
-    70% {
         margin-left: -200%;
     }
 
-    95% {
-        margin-left: -200%;
+    75% {
+        margin-left: -300%;
+    }
+
+    85% {
+        margin-left: -300%;
     }
 
     100% {
@@ -195,24 +222,32 @@ main {
         margin-left: 0;
     }
 
-    30% {
+    10% {
         margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
     }
 
     35% {
         margin-left: -100%;
     }
 
+    50% {
+        margin-left: -200%;
+    }
+
     65% {
-        margin-left: -100%;
-    }
-
-    70% {
         margin-left: -200%;
     }
 
-    95% {
-        margin-left: -200%;
+    75% {
+        margin-left: -300%;
+    }
+
+    85% {
+        margin-left: -300%;
     }
 
     100% {
@@ -243,25 +278,36 @@ main {
 
   & .textBienvenida{
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    width: 80%;
+    height: auto;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    font-family: 'Gilda Display';
+    font-size: 1.1rem;
+    line-height: 25px;
+
     
   }
-  .secciones{
+  & .secciones{
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    border: solid 1px black;
+    background-color: blue;
+    
+    
   }
 
-  .footer{
+  & .footer{
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    border: solid 1px black;
+    background-color: cadetblue;
+    
   }
 
 
