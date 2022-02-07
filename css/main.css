@@ -14,6 +14,7 @@ main {
   grid-template-rows: 25vh 60vh 30vh 50vh 30vh;
   justify-content: center;
   justify-items: center;
+  padding-top: 2rem;
 }
 main .container {
   display: flex;
