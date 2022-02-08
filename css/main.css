@@ -11,7 +11,7 @@ body {
 main {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 25vh 60vh 30vh 50vh 30vh;
+  grid-template-rows: 40vh 60vh 20vh 50vh 30vh;
   justify-content: center;
   justify-items: center;
   padding-top: 2rem;
@@ -28,7 +28,7 @@ main .navbarContainer {
   display: flex;
   flex-flow: row wrap;
   width: 100vw;
-  height: 21vh;
+  height: 40vh;
   justify-content: space-around;
   align-content: center;
 }
@@ -206,8 +206,8 @@ main .textBienvenida {
   display: flex;
   flex-flow: row wrap;
   width: 80%;
-  height: auto;
-  justify-content: center;
+  height: 20%;
+  align-items: center;
   text-align: center;
   font-family: "Gilda Display";
   font-size: 1.1rem;
