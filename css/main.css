@@ -11,7 +11,7 @@ body {
 main {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 25vh 100vh 20vh 45vh 20vh;
+  grid-template-rows: 25vh 100vh auto auto auto;
   justify-content: center;
   justify-items: center;
   padding-top: 1rem;
@@ -206,7 +206,7 @@ main .textBienvenida {
   display: flex;
   flex-flow: row wrap;
   width: 80%;
-  height: 20%;
+  height: auto;
   align-items: center;
   text-align: center;
   font-family: "Gilda Display";
@@ -217,7 +217,7 @@ main .secciones__Container {
   display: flex;
   flex-flow: row wrap;
   width: 97%;
-  height: 100%;
+  height: auto;
   justify-content: space-evenly;
 }
 main .secciones__Container .seccion__Uno {
@@ -308,6 +308,7 @@ main .footer {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+  height: auto;
   justify-content: space-evenly;
   align-items: center;
   background-color: #b5bac9;
