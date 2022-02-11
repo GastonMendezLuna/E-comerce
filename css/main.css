@@ -84,7 +84,6 @@ body {
   .main .menuResponsive a {
     display: block;
     width: 100vw;
-    padding: 10px 0;
     text-align: center;
     background: #8c8c8c;
     color: white;
