@@ -16,29 +16,53 @@
     <title>Alma Gesell Artesanias</title>
 </head>
 <body>
-    <main class="Container">
+    <main>
         <div class="navbarContainer">
-            <ul class="barraNavegacion">
 
-                <li><a href="index.html">Alma Villa Gesell</a></liclass>
-                <li><a href="pages/sobrenosotros.html">Sobre Nosotros</a></li>
-                <li><a href="pages/productos.html">Productos</a></li>
-                <li><a href="pages/pedidos.html">Pedidos</a></li>
-                <li><a href="pages/Contacto.html">Contacto</a></li>
+                <a href="index.html"><img class="logoPagina" src="root/assets/img/Alma gesell.gif" width="180" height="120" alt="logo pagina"></a>
+            
 
-            </ul>
-            <div class="iconos">
-                <a href="#"><img src="root/assets/img/carrito.jpg" width="55" height="55" alt="carrito de compras"></a>
+            <nav class="barraNavegacion">
+                <a href="index.html">Alma Villa Gesell</a>
+
+                <a href="pages/sobrenosotros.html">Sobre Nosotros</a>
+
+                <a href="pages/productos.html">Productos</a>
+
+                <a href="pages/pedidos.html">Pedidos</a>
+
+                <a href="pages/Contacto.html">Contacto</a>
+            </nav>
+
+
+            <div class="icono__Uno">
+                <a href="#"><img class="iconos" src="root/assets/img/carrito.jpg" width="55" height="55" alt="carrito de compras"></a>
             </div>
-            <div class="iconos">
-                <a href="#"><img src="root/assets/img/usuario.png" width="40" height="40" alt="ingreso usuario"></a>
-            </div>
-            <div>
-                <a href="index.html"><img src="root/assets/img/Alma gesell.gif" width="200" height="120" alt="logo pagina"></a>
+            <div class="icono__Dos">
+                <a href="#"><img  class="iconos" src="root/assets/img/usuario.png" width="40" height="40" alt="ingreso usuario"></a>
             </div>
             
+
+            <a href="#" id="menuHamburguesa">
+                <img src="root/assets/img/192-menu3.svg" alt="">
+            </a>
+
         </div>
 
+         <!-- MENU RESPONSIVO HAMBURGUESA -->
+         <nav class="menuResponsive">
+            <a href="index.html">Alma Villa Gesell</a>
+
+            <a href="pages/sobrenosotros.html">Sobre Nosotros</a>
+
+            <a href="pages/productos.html">Productos</a>
+
+            <a href="pages/pedidos.html">Pedidos</a>
+
+            <a href="pages/Contacto.html">Contacto</a>
+        </nav>
+        
+        <!-- SLIDER GALERIA DE FOTOS  -->
         <div id="page">
             <section>
                 
@@ -130,6 +154,7 @@
 
         </div>
     </main>
-
+<script src="javascript/liv.js"></script>
+<script src="javascript/ecomerce.js"></script>
 </body>
 </html>

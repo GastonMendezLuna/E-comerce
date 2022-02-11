@@ -12,10 +12,10 @@ body {
 main {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 25vh 100vh auto auto auto;
+  grid-template-rows: 33vh 100vh auto auto auto;
   justify-content: center;
   justify-items: center;
-  padding-top: 1rem;
+  
   
 
   & .container{
@@ -24,16 +24,18 @@ main {
     flex-wrap: wrap;
     width: 100vw;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     
   }
   & .navbarContainer{
     display: flex;
     flex-flow: row wrap;
-    width: 100vw;
+    width: 99vw;
     height: 40vh;
     justify-content: space-around;
     align-content: flex-start;
+
    
   }
   & .barraNavegacion{
@@ -52,30 +54,129 @@ main {
     font-size: 1.5rem;
   }
 
-  &.respmenu a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 2px solid #456789;
-    max-width: 200px;
-    background: #234567;
-    font-variant: small-caps;
-    text-shadow: 1px 1px black;
+  
+
+  & #menuHamburguesa{
+      display: none;
   }
 
-  & .iconos{
+
+
+  & .icono__Uno{
       display: flex;
       flex-flow: row wrap;
-      align-items: center;
+      align-content: center;
       
   }
+  & .icono__Dos{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    
+}
+
+  & .menuResponsive{
+      display: none;
+      
+  }
+
+  
+
+  @media only screen and (max-width: 800px) {
+
+    .navbarContainer{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100vw;
+        height: 45vh;
+        justify-content:space-around;
+        align-content: center;
+       
+      }
+
+
+    #menuHamburguesa{
+        display: block;
+    }
+
+    #menuHamburguesa img{
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 30px;
+
+    }
+
+    .barraNavegacion{
+        display: none;
+    }
+
+    .menuResponsive a{
+        display: block;
+        width: 100vw;
+        padding: 10px 0;
+        text-align: center;
+        background: #8c8c8c;
+        color: white;
+        font-weight: 800;
+        border-bottom: 2px solid white;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+
+    }
+
+    .menuResponsive a:hover{
+        background: white;
+        color: black;
+
+    }
+
+    .mostrar{
+        display: block;
+    }
+
+    .icono__Uno{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 30px;
+        
+        
+    }
+    .icono__Dos{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        top: 30px;
+        
+        
+    }
+
+    .logoPagina{
+        display: flex;
+        flex-flow: row wrap;
+        width: 6rem;
+        height: 6rem;
+        justify-content: center;
+        align-items: flex-start;
+        border: 1px solid black;
+        left: 10%;
+    }
+
+ }
+     
 
   & .carrousel{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
     
   }
 
