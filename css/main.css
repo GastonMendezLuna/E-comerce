@@ -8,14 +8,14 @@ body {
   text-decoration: none;
 }
 
-main {
+.main {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 33vh 100vh auto auto auto;
+  grid-template-rows: 35vh 100vh auto auto auto;
   justify-content: center;
   justify-items: center;
 }
-main .container {
+.main .container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -23,46 +23,47 @@ main .container {
   justify-content: center;
   justify-items: center;
   align-items: center;
+  border: 1px solid black;
 }
-main .navbarContainer {
+.main .navbarContainer {
   display: flex;
   flex-flow: row wrap;
   width: 99vw;
-  height: 40vh;
+  height: 20vh;
   justify-content: space-around;
   align-content: flex-start;
+  border: 1px solid black;
 }
-main .barraNavegacion {
+.main .barraNavegacion {
   display: flex;
   flex-flow: row wrap;
   width: 60vw;
   justify-content: space-around;
   list-style: none;
   align-content: center;
+  border: 1px solid black;
 }
-main a {
+.main a {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
 }
-main #menuHamburguesa {
+.main #menuHamburguesa {
   display: none;
 }
-main .icono__Uno {
+.main .icono__Uno {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
 }
-main .icono__Dos {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-}
-main .menuResponsive {
+.main .menuResponsive {
   display: none;
+  position: absolute;
+  top: 6rem;
+  left: 0.5rem;
 }
 @media only screen and (max-width: 800px) {
-  main .navbarContainer {
+  .main .navbarContainer {
     display: flex;
     flex-flow: row wrap;
     width: 100vw;
@@ -70,18 +71,17 @@ main .menuResponsive {
     justify-content: space-around;
     align-content: center;
   }
-  main #menuHamburguesa {
+  .main #menuHamburguesa {
     display: block;
   }
-  main #menuHamburguesa img {
-    width: 2.5rem;
-    height: 2.5rem;
-    top: 30px;
+  .main #menuHamburguesa img {
+    width: 3rem;
+    height: 3rem;
+    top: 35px;
+    position: absolute;
+    right: 1rem;
   }
-  main .barraNavegacion {
-    display: none;
-  }
-  main .menuResponsive a {
+  .main .menuResponsive a {
     display: block;
     width: 100vw;
     padding: 10px 0;
@@ -93,34 +93,27 @@ main .menuResponsive {
     transition: all 1s;
     -webkit-transition: all 1s;
   }
-  main .menuResponsive a:hover {
+  .main .menuResponsive a:hover {
     background: white;
     color: black;
   }
-  main .mostrar {
+  .main .mostrar {
     display: block;
+    height: 10rem;
   }
-  main .icono__Uno {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+  .main .icono__Uno {
+    display: block;
+    position: absolute;
+    right: 5.5em;
     width: 2.5rem;
     height: 2.5rem;
     top: 30px;
   }
-  main .icono__Dos {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    top: 30px;
-  }
-  main .logoPagina {
-    display: flex;
-    flex-flow: row wrap;
+  .main .logoPagina {
+    display: block;
+    position: absolute;
+    left: 0.5rem;
+    top: 1rem;
     width: 6rem;
     height: 6rem;
     justify-content: center;
@@ -129,21 +122,20 @@ main .menuResponsive {
     left: 10%;
   }
 }
-main .carrousel {
+.main .carrousel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
 }
-main input[name=slider-select-element] {
+.main input[name=slider-select-element] {
   display: none;
 }
-main #slider-arrows {
+.main #slider-arrows {
   margin: 0 auto 0 auto;
   width: 100%;
 }
-main #slider-box {
+.main #slider-box {
   -moz-animation: autoSlider 15s infinite linear;
   -o-animation: autoSlider 15s infinite linear;
   -webkit-animation: autoSlider 15s infinite linear;
@@ -156,42 +148,42 @@ main #slider-box {
   height: 100%;
   width: 455%;
 }
-main #slider-container {
+.main #slider-container {
   height: 80%;
   margin: 0 auto;
   overflow: hidden;
   text-align: left;
   width: 100%;
 }
-main .element-uno,
-main .element-dos,
-main .element-tres,
-main .element-cuatro {
+.main .element-uno,
+.main .element-dos,
+.main .element-tres,
+.main .element-cuatro {
   min-height: 600px;
   max-height: 100%;
   width: 100%;
 }
-main .element-uno {
+.main .element-uno {
   background-image: url(../root/assets/img/gatito\ en\ cesta\ de\ mimbre.jpg);
   background-size: 100% 100%;
   width: 100vw;
 }
-main .element-dos {
+.main .element-dos {
   background-image: url(../root/assets/img/artesania\ macrame.jpg);
   background-size: 100% 100%;
   width: 100vw;
 }
-main .element-tres {
+.main .element-tres {
   background-image: url(../root/assets/img/cesta\ de\ mimbre.jpg);
   background-size: 100% 100%;
   width: 100vw;
 }
-main .element-cuatro {
+.main .element-cuatro {
   background-image: url(../root/assets/img/pintura\ corazon.jpg);
   background-size: 100% 100%;
   width: 100vw;
 }
-main .slider-element {
+.main .slider-element {
   float: left;
   width: 22%;
 }
@@ -282,7 +274,7 @@ main .slider-element {
     margin-left: 0;
   }
 }
-main .textBienvenida {
+.main .textBienvenida {
   display: flex;
   flex-flow: row wrap;
   width: 80%;
@@ -293,25 +285,25 @@ main .textBienvenida {
   font-size: 1.3rem;
   line-height: 25px;
 }
-main .secciones__Container {
+.main .secciones__Container {
   display: flex;
   flex-flow: row wrap;
   width: 97%;
   height: auto;
   justify-content: space-evenly;
 }
-main .secciones__Container .seccion__Uno {
+.main .secciones__Container .seccion__Uno {
   display: inline-block;
   position: relative;
 }
-main .secciones__Container .seccion__Uno .texto__Uno {
+.main .secciones__Container .seccion__Uno .texto__Uno {
   position: absolute;
   top: 30px;
   left: 10%;
   font-size: 1.5rem;
   font-weight: 800;
 }
-main .secciones__Container .seccion__Uno .texto__Dos {
+.main .secciones__Container .seccion__Uno .texto__Dos {
   position: absolute;
   top: 60px;
   left: 10%;
@@ -320,18 +312,18 @@ main .secciones__Container .seccion__Uno .texto__Dos {
   font-weight: 500;
   text-align: justify;
 }
-main .secciones__Container .seccion__Dos {
+.main .secciones__Container .seccion__Dos {
   display: inline-block;
   position: relative;
 }
-main .secciones__Container .seccion__Dos .texto__Uno {
+.main .secciones__Container .seccion__Dos .texto__Uno {
   position: absolute;
   top: 30px;
   left: 10%;
   font-size: 1.5rem;
   font-weight: 700;
 }
-main .secciones__Container .seccion__Dos .texto__Dos {
+.main .secciones__Container .seccion__Dos .texto__Dos {
   position: absolute;
   top: 60px;
   left: 10%;
@@ -340,18 +332,18 @@ main .secciones__Container .seccion__Dos .texto__Dos {
   font-weight: 500;
   text-align: justify;
 }
-main .secciones__Container .seccion__Tres {
+.main .secciones__Container .seccion__Tres {
   display: inline-block;
   position: relative;
 }
-main .secciones__Container .seccion__Tres .texto__Uno {
+.main .secciones__Container .seccion__Tres .texto__Uno {
   position: absolute;
   top: 30px;
   left: 10%;
   font-size: 1.5rem;
   font-weight: 700;
 }
-main .secciones__Container .seccion__Tres .texto__Dos {
+.main .secciones__Container .seccion__Tres .texto__Dos {
   position: absolute;
   top: 60px;
   left: 10%;
@@ -360,18 +352,18 @@ main .secciones__Container .seccion__Tres .texto__Dos {
   font-weight: 500;
   text-align: justify;
 }
-main .secciones__Container .seccion__Cuatro {
+.main .secciones__Container .seccion__Cuatro {
   display: inline-block;
   position: relative;
 }
-main .secciones__Container .seccion__Cuatro .texto__Uno {
+.main .secciones__Container .seccion__Cuatro .texto__Uno {
   position: absolute;
   top: 30px;
   left: 10%;
   font-size: 1.5rem;
   font-weight: 700;
 }
-main .secciones__Container .seccion__Cuatro .texto__Dos {
+.main .secciones__Container .seccion__Cuatro .texto__Dos {
   position: absolute;
   top: 60px;
   left: 10%;
@@ -380,11 +372,11 @@ main .secciones__Container .seccion__Cuatro .texto__Dos {
   font-weight: 500;
   text-align: justify;
 }
-main .secciones__Container img {
+.main .secciones__Container img {
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
-main .footer {
+.main .footer {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
@@ -393,11 +385,11 @@ main .footer {
   align-items: center;
   background-color: #b5bac9;
 }
-main .footer .texto__Patricia {
+.main .footer .texto__Patricia {
   font-size: 1.5rem;
   font-weight: 800;
 }
-main .footer .texto__Direccion {
+.main .footer .texto__Direccion {
   font-size: 1.2rem;
 }
 
