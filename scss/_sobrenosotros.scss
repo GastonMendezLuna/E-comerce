@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: black;
+    font-family: 'Gilda Display';
+    text-decoration: none;
+    
+    
+}
+
+// NAVBAR Y FOOTER TIENEN LAS MISMAS PROPIEDADES QUE EL INDEX. SE REALIZO UN IMPORT EN LA HOJA SCSS 
+.sobrenosotros-Container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    background: blue;
+
+
+
+
+}

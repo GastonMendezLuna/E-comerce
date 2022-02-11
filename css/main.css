@@ -1,3 +1,4 @@
+@import url(_sobrenosotros.scss);
 body {
   margin: 0;
   padding: 0;
@@ -14,15 +15,6 @@ body {
   grid-template-rows: 8rem auto auto auto auto;
   justify-content: center;
   justify-items: center;
-}
-.main .container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100vw;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
 }
 .main .navbarContainer {
   display: flex;
@@ -97,8 +89,8 @@ body {
     flex-flow: row wrap;
     left: 0.5rem;
     top: 1rem;
-    width: 6rem;
-    height: 6rem;
+    width: 9rem;
+    height: 9rem;
     justify-content: center;
     align-items: flex-start;
     left: 10%;
