@@ -6,9 +6,15 @@ body {
     color: black;
     font-family: 'Gilda Display';
     text-decoration: none;
- 
+    
+    
 }
- 
+ .main {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 8rem auto auto auto auto;
+  justify-content: center;
+  justify-items: center;
   
   
 
@@ -27,7 +33,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     width: 99vw;
-    height: 20vh;
+    height: 6rem;
     justify-content: space-around;
     align-content: flex-start;
     border: 1px solid black;
@@ -38,6 +44,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     width: 60vw;
+    height: 5rem;
     justify-content: space-around;
     list-style: none;
     align-content: center;
@@ -71,7 +78,6 @@ body {
       display: none;
       position: absolute;
       top: 6rem;
-      left: 0.5rem;
       
       
   }
@@ -82,31 +88,26 @@ body {
 
     .navbarContainer{
         display: flex;
+        flex-flow: row;
+        justify-content: center;
+       
+      }
+      .barraNavegacion{
+        display: none;
         flex-flow: row wrap;
         width: 100vw;
-        height: 45vh;
-        justify-content:space-around;
+        justify-content: center;
+        list-style: none;
         align-content: center;
-       
+    
       }
 
 
-    #menuHamburguesa{
-        display: block;
-    }
-
-    #menuHamburguesa img{
-        width: 3rem;
-        height: 3rem;
-        top: 35px;
-        position: absolute;
-        right: 1rem;
-
-    }
-
+    
     .menuResponsive a{
         display: block;
         width: 100vw;
+        padding: 10px 0;
         text-align: center;
         background: #8c8c8c;
         color: white;
@@ -125,32 +126,50 @@ body {
 
     .mostrar{
         display: block;
-        height: 10rem;
     }
-
-    .icono__Uno{
-        display: block;
-        position: absolute;
-        right: 5.5em;
-        width: 2.5rem;
-        height: 2.5rem;
-        top: 30px;
-        
-        
-    }
-    
     .logoPagina{
-        display: block;
-        position: absolute;
+        display: flex;
+        flex-flow: row wrap;
         left: 0.5rem;
         top: 1rem;
         width: 6rem;
         height: 6rem;
         justify-content: center;
         align-items: flex-start;
-        border: 1px solid black;
         left: 10%;
     }
+    .container-Iconos{
+        display: flex;
+        flex-direction: row;
+        width: 10rem;
+        height: auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .icono__Uno{
+        display: flex;
+        flex-flow: row wrap;
+        right: 5.5em;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 30px;
+          
+    }
+    #menuHamburguesa{
+        display: flex;
+    }
+
+    #menuHamburguesa img{
+        display: flex;
+        flex-flow: row wrap;
+        width: 3rem;
+        height: 3rem;
+        top: 35px;
+        right: 1rem;
+    }
+    
+    
 
  }
      
