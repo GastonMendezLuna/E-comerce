@@ -517,7 +517,10 @@ body {
 
 }
 
-@import url(_sobrenosotros.scss);
+@import "sobrenosotros";
+@import "productos";
+@import "pedidos";
+
 
 
 
