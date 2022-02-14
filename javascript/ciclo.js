@@ -3,6 +3,10 @@
 let nombre = prompt("¿Cómo es tu nombre?");
 let apellido = prompt("¿Cómo es tu apellido?");
 alert("¡¡Hola" + " " + nombre + " " + apellido + " " + "!!");
+let edad = parseInt(prompt("¿Qué edad tienes?"));
+let fecha = 2021;
+let anioNacimiento = fecha - edad;
+alert("Tu fecha de nacimiento es mas o menos en el año " + anioNacimiento);
 
 
 let productoA = "cesto mimbre";
