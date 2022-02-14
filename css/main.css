@@ -461,7 +461,7 @@ body {
 }
 
 .conte .cesto-Mimbre img {
-  height: 210px;
+  height: 320px;
   width: 300px;
 }
 
@@ -473,18 +473,27 @@ body {
   background-color: #111;
 }
 
-.conte .spider-man {
+.conte .atrapasuenios {
   background-color: #111;
 }
 
 .conte .bolso-Rustico img {
-  height: 195px;
+  height: 290px;
   width: 285px;
 }
 
-.conte .spider-man img {
-  height: 330px;
-  width: 300px;
+.conte .atrapasuenios img {
+  height: 290px;
+  width: 285px;
+}
+
+.conte .cuadro {
+  background-color: #111;
+}
+
+.conte .cuadro img {
+  height: 230px;
+  width: 275px;
 }
 
 .informacion {
