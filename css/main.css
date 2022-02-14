@@ -411,8 +411,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
-  background: blue;
 }
 
 .tarjetas-Container {
@@ -492,8 +490,8 @@ body {
 }
 
 .conte .cuadro img {
-  height: 230px;
-  width: 275px;
+  height: 275px;
+  width: 250px;
 }
 
 .informacion {
