@@ -6,11 +6,12 @@ $(".menuResponsive").toggle(300).addclass('.mostrar');
 
 });
 
-/*let nombre = prompt("¿Cómo es tu nombre?");
+let nombre = prompt("¿Cómo es tu nombre?");
 let apellido = prompt("¿Cómo es tu apellido?");
 alert("¡¡Hola" + " " + nombre + " " + apellido + " " + "!!");
 alert("Los productos que tenemos en venta son: cesto mimbre, bolso rustico, atrapa sueños y cuadro tres partes ")
 
+while (compraDosoMas = prompt)
 
 let productoA = "cesto mimbre";
 let stockA = 10;
@@ -89,4 +90,4 @@ alert("Pago en efectivo tiene 10% de descuento. Por lo que pagaras " + montoApag
 else{
   alert("Solo puedes comprar " + stockD + " unidades de este producto. Muchas gracias")
 } 
-}*/
+}
