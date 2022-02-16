@@ -21,7 +21,7 @@ quiereJugar = prompt("Quiere jugar? si/no. Escriba no en caso de que se haya abu
 }
  
 let Jugando = prompt("Queres seguir jugando? Bueno/no, sos pesado")
-for (let i = 2; i <= 1000; i++) {
+for (let i = 2; i <= 20; i++) {
 alert(i + " elefantes se columpiaban sobre la tela de una araña");
 }
 
