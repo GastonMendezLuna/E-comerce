@@ -421,7 +421,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-.tarjetas-Container .tarjeta-Producto {
+
+.tarjeta-Producto {
   display: flex;
   flex-flow: row wrap;
   width: 250px;
@@ -439,82 +440,67 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
-
-.conte {
+.conte_parent .conte {
   height: 390px;
   width: 290px;
   box-shadow: 0 0 7px #111;
   margin: 30px 30px;
 }
-
-.conte .card {
+.conte_parent .conte .card {
   height: 200px;
   width: 100%;
   margin-bottom: 80px;
 }
-
-.card img {
+.conte_parent .conte .card img {
   margin: auto;
   display: block;
 }
-
-.conte .cesto-Mimbre img {
+.conte_parent .conte .cesto-Mimbre img {
   height: 320px;
   width: 300px;
 }
-
-.conte .cesto-Mimbre {
+.conte_parent .conte .cesto-Mimbre {
   background-color: #111;
 }
-
-.conte .bolso-Rustico {
+.conte_parent .conte .bolso-Rustico {
   background-color: #111;
 }
-
-.conte .atrapasuenios {
+.conte_parent .conte .atrapasuenios {
   background-color: #111;
 }
-
-.conte .bolso-Rustico img {
+.conte_parent .conte .bolso-Rustico img {
   height: 290px;
   width: 285px;
 }
-
-.conte .atrapasuenios img {
+.conte_parent .conte .atrapasuenios img {
   height: 290px;
   width: 285px;
 }
-
-.conte .cuadro {
+.conte_parent .conte .conte .cuadro {
   background-color: #111;
 }
-
-.conte .cuadro img {
+.conte_parent .conte .cuadro img {
   height: 275px;
   width: 250px;
 }
-
-.informacion {
+.conte_parent .conte .informacion {
   height: 30px;
   width: 100%;
 }
-
-.informacion h1 {
+.conte_parent .conte .informacion h1 {
   font-family: sans-serif;
   font-size: 1.2em;
   text-align: center;
   color: #333;
   margin-bottom: 23px;
 }
-
-.informacion p {
+.conte_parent .conte .informacion p {
   text-align: center;
   font-family: sans-serif;
   font-size: 0.9em;
   color: #555;
 }
-
-.precio {
+.conte_parent .conte .precio {
   height: 30px;
   width: 85%;
   margin: auto;
@@ -523,21 +509,17 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
-.box-precio {
+.conte_parent .conte .box-precio {
   width: 50px;
 }
-
-.precio1 {
+.conte_parent .conte .precio1 {
   color: red;
   font-size: 0.8em;
 }
-
-.precio .precio2 {
+.conte_parent .conte .precio2 {
   font-size: 1em;
 }
-
-.shoping {
+.conte_parent .conte .shoping {
   font-size: 1.5em;
   color: #555;
 }
