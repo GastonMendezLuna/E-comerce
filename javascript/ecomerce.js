@@ -10,7 +10,7 @@ let nombre = prompt("¿Cómo es tu nombre?");
 let apellido = prompt("¿Cómo es tu apellido?");
 alert("¡¡Hola" + " " + nombre + " " + apellido + " " + "!!");
 let cantidadProductos = parseInt(prompt("Cuantos articulos diferentes vas a comprar? 1, 2, 3 o 4"));
-alert("Los productos que tenemos en venta son: cesto mimbre, bolso rustico atrapa sueños y cuadro tres partes");
+
 
 
 let productoA = "cesto mimbre";
