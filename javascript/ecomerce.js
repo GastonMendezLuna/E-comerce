@@ -94,13 +94,10 @@ else{
 }
 break
 
-}
-
-
 // ACA COMIENZA LA FUNCION DE PRECIO DE LISTA POR LA COMPRA DE 1 PRODUCTO
 
 else{
-  function(){
+  function soloUno(){
 
 let compra = prompt("¿Qué artículo deseas comprar?");
 
@@ -119,7 +116,7 @@ else{
 }
 
 else if (compra == productoB){
-  let cantidadComprada == 1;
+  let cantidadComprada = 1;
   if(cantidadComprada <= stockB){
   stock = stockB - cantidadComprada;
   let montoApagar = cantidadComprada * precioB;
@@ -133,7 +130,7 @@ else{
 }
 
 else if (compra == productoC){
-  let cantidadComprada = = 1;
+  let cantidadComprada = 1;
   if(cantidadComprada <= stockC){
   stock = stockC - cantidadComprada;
   let montoApagar = cantidadComprada * precioC;
@@ -147,7 +144,7 @@ else{
 }
 
 else if (compra == productoD){
-  let cantidadComprada = = 1;
+  let cantidadComprada = 1;
   if(cantidadComprada <= stockD){
   stock = stockD - cantidadComprada;
   let montoApagar = cantidadComprada;
@@ -164,5 +161,9 @@ else{
 
 }
 
+
 }
+
+
+
 
