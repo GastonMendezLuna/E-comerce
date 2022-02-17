@@ -1,6 +1,6 @@
 
 
-let elegido = "tijera";
+/*let elegido = "tijera";
 quiereJugar = prompt("Quiere jugar? si/no");
 while (quiereJugar == "si")  {
     ingresoUsuario = prompt("piedra, papel o tijera?");
@@ -23,7 +23,7 @@ quiereJugar = prompt("Quiere jugar? si/no. Escriba no en caso de que se haya abu
 let Jugando = prompt("Queres seguir jugando? Bueno/no, sos pesado")
 for (let i = 2; i <= 20; i++) {
 alert(i + " elefantes se columpiaban sobre la tela de una araña");
-}
+}*/
 
 
 
