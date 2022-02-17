@@ -11,35 +11,40 @@ let apellido = prompt("¿Cómo es tu apellido?");
 alert("¡¡Hola" + " " + nombre + " " + apellido + " " + "!!");
 let cantidadProductos = parseInt(prompt("Cuantos articulos diferentes vas a comprar? 1, 2, 3 o 4"));
 
-
-
 let productoA = "cesto mimbre";
 let stockA = 10;
 let precioA = 3000;
-let descuentoProductoA = precioA * 0.15;
+let descuentoProductoA = precioA * 0.10;
 
 let productoB = "bolso rustico";
 let stockB = 10;
 let precioB = 2500;
-let descuentoProductoB = precioB *0.15;
+let descuentoProductoB = precioB *0.10;
 
 let productoC = "atrapa sueños";
 let stockC = 10;
 let precioC = 2000;
-let descuentoProductoC = precioC * 0.15;
+let descuentoProductoC = precioC * 0.10;
 
 
 let productoD = "cuadro tres partes";
 let stockD = 10;
 let precioD = 3000;
-let descuentoProductoD = precioD * 0.15;
+let descuentoProductoD = precioD * 0.10;
 
 
 function faltaStock(stock){
   alert("Solo puedes comprar " + stock + " unidades de este producto. Muchas gracias");
 }
 
+let montoApagar= 0;
+let cantidadComprada;
 
+function totalDescuento(stock, precio, cantidadComprada, descuentoProducto){
+  stock -= cantidadComprada;
+  montoApagar = cantidadComprada * precio - descuentoProducto * cantidadComprada;
+  console.log("te quedan en stock " + stock);
+}
 
 
 for (let i = 0; i < cantidadProductos; i++){
@@ -48,40 +53,29 @@ for (let i = 0; i < cantidadProductos; i++){
 if (compra == productoA){
   let cantidadComprada = parseInt(prompt("¿cuantas unidades?"));
   if(cantidadComprada <= stockA){
-  stock = stockA - cantidadComprada;
-  let montoApagar = cantidadComprada * precioA - descuentoProductoA * cantidadComprada;
   
-alert("La compra de mas de 1 producto le otorga un 15% de descuento. Por lo que pagaras " + montoApagar + " pesos");
-  console.log("te quedan en stock " + stock);
+  totalDescuento(stockA, precioA, cantidadComprada, descuentoProductoA)
+
     }
 else{
   faltaStock(stockA)
   
 } 
 }
-
+  
 else if (compra == productoB){
   let cantidadComprada = parseInt(prompt("¿cuantas unidades?"));
   if(cantidadComprada <= stockB){
-  stock = stockB - cantidadComprada;
-  let montoApagar = cantidadComprada * precioB - descuentoProductoB * cantidadComprada;
-  
-alert("La compra de mas de 1 producto le otorga un 15% de descuento. Por lo que pagaras " + montoApagar + " pesos");
-  console.log("te quedan en stock " + stock);
+  totalDescuento(stockB, precioB,  cantidadComprada, descuentoProductoB)
     }
 else{
   faltaStock(stockB)
 } 
 }
-
-else if (compra == productoC){
+  else if (compra == productoC){
   let cantidadComprada = parseInt(prompt("¿cuantas unidades?"));
-  if(cantidadComprada <= stockC){
-  stock = stockC - cantidadComprada;
-  let montoApagar = cantidadComprada * precioC - descuentoProductoC * cantidadComprada;
-  
-alert("La compra de mas de 1 producto le otorga un 15% de descuento. Por lo que pagaras " + montoApagar + " pesos");
-  console.log("te quedan en stock " + stock);
+  if(cantidadComprada <= stockB){
+  totalDescuento(stockC, precioC,  cantidadComprada, descuentoProductoC)
     }
 else{
   faltaStock(stockC)
@@ -90,20 +84,17 @@ else{
 
 else if (compra == productoD){
   let cantidadComprada = parseInt(prompt("¿cuantas unidades?"));
-  if(cantidadComprada <= stockD){
-  stock = stockD - cantidadComprada;
-  let montoApagar = cantidadComprada * precioD - descuentoProductoD * cantidadComprada;
-  
-alert("La compra de mas de 1 producto le otorga un 15% de descuento. Por lo que pagaras " + montoApagar + " pesos");
-  console.log("te quedan en stock " + stock);
+  if(cantidadComprada <= stockB){
+  totalDescuento(stockD, precioD,  cantidadComprada, descuentoProductoD)
     }
 else{
-  faltaStock(stockD)
+  faltaStock(stockC)
 } 
 }
 
+alert("El pago en efectivo le otorga un 10% de descuento. Por lo que pagaras " + montoApagar + " pesos");
+  
 }
-
 
 
 
