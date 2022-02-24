@@ -11,29 +11,6 @@ let cantidadProductos = parseInt(
 );
 
 
-
-/* const productoA = {
-  nombre: "Cesto mimbre",
-  stock: 10,
-  precio: 2700,
-}
-const productoB = {
-  nombre: "Bolso rustico",
-  stock: 10,
-  precio: 2250,
-}
-const productoC = {
-  nombre: "Atrapa sueños",
-  stock: 10,
-  precio: 1800,
-
-}
-const productoD = {
-  nombre: "Cuadro tres partes",
-  stock: 10,
-  precio: 2700,
-} */
-
 class Producto{ 
   constructor(nombre, stock, precio){
   this.nombre = nombre;
@@ -144,27 +121,3 @@ alert(
     " pesos"
 );
 
-//array de umeros con in ciclo for
-/* const numeros = [1, 2, 3, 4, 5];
-for (let index = 0; index < 5; index++){
-  alert(numeros[index]);
-} */
-/*  */
-
-/* let productoA = "cesto mimbre";
-let stockA = 10;
-let precioA = 2700;
-
-let productoB = "bolso rustico";
-let stockB = 10;
-let precioB = 2250;
-
-
-let productoC = "atrapa sueños";
-let stockC = 10;
-let precioC = 1800;
-
-
-let productoD = "cuadro tres partes";
-let stockD = 10;
-let precioD = 2700; */
