@@ -33,13 +33,7 @@ const tipoMimbre = Productos.filter(Producto => Producto.tipo == 'mimbre');
 const tipoTejido = Productos.filter(Producto => Producto.tipo == 'tejido');
 const tipoMacrame = Productos.filter(Producto => Producto.tipo == 'macrame');
 const tipoCuadro = Productos.filter(Producto => Producto.tipo == 'cuadro');
-/* console.log(menorPrecio);
-console.log(precioMedio);
-console.log(mayorPrecio);
-console.log(tipoMimbre);
-console.log(tipoTejido);
-console.log(tipoMacrame);
-console.log(tipoCuadro); */
+
 
 let filtroPrecio = parseInt(prompt('Quiere filtrar la lista de productos por precio? \n  Opcion 1 Menos de $1.500 \n Opcion 2 Entre $1.501 y $4.000 \n Opcion 3 Mas de $4.000'));
 
