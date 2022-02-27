@@ -162,11 +162,7 @@ alert(
     " pesos"
 );
 
-
-
-
-
-
+//ingresar productos de otra manera
 
 /* Productos.push(new Producto("cesto mimbre", 10, 2700));
 Productos.push(new Producto("bolso rustico", 10, 2250));
