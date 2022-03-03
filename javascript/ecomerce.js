@@ -2,7 +2,9 @@ $("#menuHamburguesa").click(function () {
   $(".menuResponsive").toggle(300).addclass(".mostrar");
 });
 
+console.log(document.body.innerHTML)
 
+/* 
 class Producto{ 
   constructor(nombre, stock, precio, tipo){
   this.nombre = nombre;
@@ -154,7 +156,7 @@ alert(
   "Tu compra tiene un valor de: " +
     montoApagar +
     " pesos"
-);
+); */
 
 //ingresar productos de otra manera
 
