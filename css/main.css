@@ -422,6 +422,12 @@ body {
   align-items: center;
 }
 
+.cardsJs {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+}
+
 .tarjeta-Producto {
   display: flex;
   flex-flow: row wrap;

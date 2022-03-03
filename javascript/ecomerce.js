@@ -2,11 +2,7 @@ $("#menuHamburguesa").click(function () {
   $(".menuResponsive").toggle(300).addclass(".mostrar");
 });
 
-let titulo = document.createElement("h2");
 
-titulo.innerHTML = "<center><h2>↑ Estos son los productos que tenemos en stock</h2></center>";
-
-document.body.prepend(titulo);
 
 
 
@@ -45,14 +41,23 @@ const productoG = new Producto("cuadro naturaleza", 10, 4700, "cuadro")
 
 const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
 
+let encabezado = document.querySelector('.cardsTitulo')
+
+let titulo = document.createElement("div");
+titulo.innerHTML = "<center><h2> Estos son los productos que tenemos en stock</h2></center>";
+encabezado.append(titulo);
+
+
+let catalogo = document.querySelector('.cardsJs')
+
 for (const producto of Productos) {
   let contenedor = document.createElement("div");
-  //Definimos el innerHTML del elemento con una plantilla de texto
+  
   contenedor.innerHTML = `<h3> catedoria: ${producto.categoria}</h3>
   <p> Producto: ${producto.nombre}</p>
   <p><b> $ ${producto.precio}</b></p>
   <b> Stock ${producto.stock}</b>`;
-  document.body.prepend(contenedor);
+  catalogo.appendChild(contenedor);
   }
 
 
