@@ -2,19 +2,36 @@ $("#menuHamburguesa").click(function () {
   $(".menuResponsive").toggle(300).addclass(".mostrar");
 });
 
-console.log(document.body.innerHTML)
+let titulo = document.createElement("h2");
 
-/* 
+titulo.innerHTML = "<center><h2>↑ Estos son los productos que tenemos en stock</h2></center>";
+
+document.body.prepend(titulo);
+
+
+
 class Producto{ 
-  constructor(nombre, stock, precio, tipo){
+  constructor(nombre, stock, precio, categoria){
   this.nombre = nombre;
   this.stock = stock;
   this.precio = precio;
-  this.tipo = tipo;
-  this.venta = function(cantidadComprada){
+  this.categoria = categoria;
+  this.venta = function (cantidadComprada){
     this.stock -= cantidadComprada
-    console.log("Se vendieron " + cantidadComprada + " " + this.nombre)
+    console.log("Se vendieron " + cantidadComprada + " " + " " + this.nombre)
+    
   }
+  this.faltaStock = function(cantidadComprada){
+    this.stock < cantidadComprada
+    alert("No tenemos mas unidades, tenemos hasta 10 " + this.nombre)
+  }
+
+  this.stockSuficiente = function(stock, precio, cantidadComprada){
+    stock -= cantidadComprada;
+  montoApagar += cantidadComprada * precio;
+  console.log("te quedan en stock " + stock + " " + this.nombre);
+  }
+
 }
 }
 
@@ -28,13 +45,25 @@ const productoG = new Producto("cuadro naturaleza", 10, 4700, "cuadro")
 
 const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
 
-const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
+for (const producto of Productos) {
+  let contenedor = document.createElement("div");
+  //Definimos el innerHTML del elemento con una plantilla de texto
+  contenedor.innerHTML = `<h3> catedoria: ${producto.categoria}</h3>
+  <p> Producto: ${producto.nombre}</p>
+  <p><b> $ ${producto.precio}</b></p>
+  <b> Stock ${producto.stock}</b>`;
+  document.body.prepend(contenedor);
+  }
+
+
+
+/* const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
 const precioMedio = Productos.filter(Producto => Producto.precio >= 1501 && Producto.precio <= 4000);
 const mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
-const tipoMimbre = Productos.filter(Producto => Producto.tipo == 'mimbre');
-const tipoTejido = Productos.filter(Producto => Producto.tipo == 'tejido');
-const tipoMacrame = Productos.filter(Producto => Producto.tipo == 'macrame');
-const tipoCuadro = Productos.filter(Producto => Producto.tipo == 'cuadro');
+const categoriaMimbre = Productos.filter(Producto => Producto.categoria == 'mimbre');
+const categoriaTejido = Productos.filter(Producto => Producto.categoria == 'tejido');
+const categoriaMacrame = Productos.filter(Producto => Producto.categoria == 'macrame');
+const categoriaCuadro = Productos.filter(Producto => Producto.categoria == 'cuadro');
 
 
 let filtroPrecio = parseInt(prompt('Quiere filtrar la lista de productos por precio? \n  Opcion 1 Menos de $1.500 \n Opcion 2 Entre $1.501 y $4.000 \n Opcion 3 Mas de $4.000'));
@@ -54,63 +83,48 @@ switch(filtroPrecio){
     alert('No tenemos mas productos de ese precio');
 }
 
+
+
 let filtroTipo = parseInt(prompt('Quiere filtrar la lista de productos por tipo de articulo? \n  Opcion 1 Articulos de mimbre \n Opcion 2 Articulos Tejidos \n Opcion 3 Articulos de Macrame \n Opcion 4 Cuadros'));
 
-switch(filtroTipo){
+switch(filtroCategoria){
 
   case 1:
-    console.log(tipoMimbre);
+    console.log(categoriaMimbre);
     break
   case 2:
-    console.log(tipoTejido);
+    console.log(categoriaTejido);
     break
   case 3:
-    console.log(tipoMacrame);
+    console.log(categoriaMacrame);
     break
   case 4:
-    console.log(tipoCuadro);
+    console.log(categoriaCuadro);
     break
   default:
     alert('No tenemos esos productos');
 }
 
-let nombre = prompt("¿Cómo es tu nombre?");
-let apellido = prompt("¿Cómo es tu apellido?");
-alert("¡¡Hola" + " " + nombre + " " + apellido + " " + "!!");
-let cantidadProductos = parseInt(
-  prompt("Cuantos articulos diferentes vas a comprar? 1, 2, 3, 4, 5, 6 o 7")
-);
 
 let montoApagar = 0;
 let cantidadComprada;
 
-function faltaStock(stock) {
-  alert(
-    "Solo puedes comprar " +
-      stock +
-      " unidades de este producto. Muchas gracias"
-  );
-}
 
-
-function stockSuficiente(stock, precio, cantidadComprada) {
-  stock -= cantidadComprada;
-  montoApagar += cantidadComprada * precio;
-  console.log("te quedan en stock " + stock);
-}
 
 function compraFinal(stock, precio, producto) {
   let cantidadComprada = parseInt(prompt("¿cuantas unidades?"));
   if (cantidadComprada <= stock) {
-       stockSuficiente(stock, precio, cantidadComprada); 
+       producto.stockSuficiente(stock, precio, cantidadComprada); 
        producto.venta(cantidadComprada)
   } 
   else {
-    faltaStock(stock);
+    producto.faltaStock(stock);
   }
 }
+let seguirComprando = prompt("¿Desea comprar? si/no");
 
-for (let i = 0; i < cantidadProductos; i++) {
+while (seguirComprando == "si") {
+  
   let compra = prompt(
     "¿Qué artículo deseas comprar?" +
       "\n1 " +
@@ -150,20 +164,13 @@ for (let i = 0; i < cantidadProductos; i++) {
   else if (compra == Productos[6].nombre) {
     compraFinal(Productos[6].stock, Productos[6].precio, Productos[6]);
   }
+  alert(
+    "Tu compra tiene un valor de: " +
+      montoApagar +
+      " pesos"
+  );  
+
+  seguirComprando = prompt("¿Desea comprar? si/no");
 }
 
-alert(
-  "Tu compra tiene un valor de: " +
-    montoApagar +
-    " pesos"
-); */
-
-//ingresar productos de otra manera
-
-/* Productos.push(new Producto("cesto mimbre", 10, 2700));
-Productos.push(new Producto("bolso rustico", 10, 2250));
-Productos.push(new Producto("atrapa sueños", 10, 1800));
-Productos.push(new Producto("cuadro tres partes", 10, 2700));
-Productos.push(new Producto("pulsera macrame", 10, 500));
-Productos.push(new Producto("acentro de mesa", 10, 2500));
-Productos.push(new Producto("cuadro naturaleza", 10, 2900)); */
+ */
