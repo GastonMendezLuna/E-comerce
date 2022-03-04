@@ -422,12 +422,6 @@ body {
   align-items: center;
 }
 
-.cardsJs {
-  display: flex;
-  border: 1px solid black;
-  padding: 10px;
-}
-
 .tarjeta-Producto {
   display: flex;
   flex-flow: row wrap;
@@ -474,6 +468,18 @@ body {
 .conte_parent .conte .atrapasuenios {
   background-color: #111;
 }
+.conte_parent .conte .cuadro {
+  background-color: #111;
+}
+.conte_parent .conte .pulseraMacrame {
+  background-color: #111;
+}
+.conte_parent .conte .centrodeMesa {
+  background-color: #111;
+}
+.conte_parent .conte .cuadroNaturaleza {
+  background-color: #111;
+}
 .conte_parent .conte .bolso-Rustico img {
   height: 290px;
   width: 285px;
@@ -481,6 +487,18 @@ body {
 .conte_parent .conte .atrapasuenios img {
   height: 290px;
   width: 285px;
+}
+.conte_parent .conte .pulseraMacrame img {
+  height: 240px;
+  width: 290px;
+}
+.conte_parent .conte .centrodeMesa img {
+  height: 250px;
+  width: 291px;
+}
+.conte_parent .conte .cuadroNaturaleza img {
+  height: 295px;
+  width: 290px;
 }
 .conte_parent .conte .conte .cuadro {
   background-color: #111;
@@ -528,6 +546,21 @@ body {
 .conte_parent .conte .shoping {
   font-size: 1.5em;
   color: #555;
+}
+.conte_parent .contenedor__Compra {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-top: 10px;
+  padding-right: 25px;
+}
+.conte_parent .contenedor__Compra .compra {
+  display: flex;
+  width: 30px;
+  height: auto;
+  padding: 2px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=main.css.map */

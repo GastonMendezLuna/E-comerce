@@ -7,13 +7,6 @@
     align-items: center;
 }
     
-.cardsJs{
-  display: flex;
-  
-  border: 1px solid black;
-  padding: 10px;
-  
-}
 
 
 .tarjeta-Producto{
@@ -66,14 +59,39 @@
     & .atrapasuenios{
       background-color:#111;
   }
+    & .cuadro{
+      background-color:#111;
+}
+    & .pulseraMacrame{
+       background-color:#111;
+}
+    & .centrodeMesa{
+      background-color:#111;
+}
+    & .cuadroNaturaleza{
+       background-color:#111;
+}
     & .bolso-Rustico img{
     height: 290px;
     width: 285px;
-  }
+}
     & .atrapasuenios img{
     height: 290px;
     width: 285px;
-  }
+}
+
+    & .pulseraMacrame img{
+    height: 240px;
+    width: 290px;
+}
+    & .centrodeMesa img{
+    height: 250px;
+    width: 291px;
+}
+    & .cuadroNaturaleza img{
+    height: 295px;
+    width: 290px;
+}
   .conte .cuadro{
     background-color: #111;
 }
@@ -121,5 +139,23 @@
       font-size: 1.5em;
       color: #555;
   }
+  }
+
+  & .contenedor__Compra{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 10px;
+    padding-right: 25px;
+    
+    & .compra{
+      display: flex;
+      width: 30px;
+      height: auto;
+      padding: 2px;
+      align-items: center;
+      
+      justify-content: space-around;
+    }
   }
 }

@@ -6,7 +6,7 @@ $("#menuHamburguesa").click(function () {
 
 
 
-class Producto{ 
+/*class Producto{ 
   constructor(nombre, stock, precio, categoria){
   this.nombre = nombre;
   this.stock = stock;
@@ -36,33 +36,15 @@ const productoB = new Producto("bolso rustico", 10, 2250, "tejido")
 const productoC = new Producto("atrapa sueños", 10, 1800, "macrame")
 const productoD = new Producto("cuadro tres partes", 10, 2700, "cuadro")
 const productoE = new Producto("pulsera macrame", 10, 500, "macrame")
-const productoF = new Producto("acentro de mesa", 10, 1500, "mimbre")
+const productoF = new Producto("centro de mesa", 10, 1500, "mimbre")
 const productoG = new Producto("cuadro naturaleza", 10, 4700, "cuadro")
 
 const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
 
-let encabezado = document.querySelector('.cardsTitulo')
-
-let titulo = document.createElement("div");
-titulo.innerHTML = "<center><h2> Estos son los productos que tenemos en stock</h2></center>";
-encabezado.append(titulo);
-
-
-let catalogo = document.querySelector('.cardsJs')
-
-for (const producto of Productos) {
-  let contenedor = document.createElement("div");
-  
-  contenedor.innerHTML = `<h3> catedoria: ${producto.categoria}</h3>
-  <p> Producto: ${producto.nombre}</p>
-  <p><b> $ ${producto.precio}</b></p>
-  <b> Stock ${producto.stock}</b>`;
-  catalogo.appendChild(contenedor);
-  }
 
 
 
-/* const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
+const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
 const precioMedio = Productos.filter(Producto => Producto.precio >= 1501 && Producto.precio <= 4000);
 const mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
 const categoriaMimbre = Productos.filter(Producto => Producto.categoria == 'mimbre');
@@ -176,6 +158,6 @@ while (seguirComprando == "si") {
   );  
 
   seguirComprando = prompt("¿Desea comprar? si/no");
-}
+}*/
 
- */
+
