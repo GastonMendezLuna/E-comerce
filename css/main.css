@@ -427,7 +427,7 @@ article button {
   letter-spacing: 0.05rem;
   font-weight: 700;
   font-size: 17px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   overflow: hidden;
   background: white;
   color: ghostwhite;
