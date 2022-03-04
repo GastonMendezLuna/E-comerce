@@ -45,7 +45,7 @@ const Productos = [productoA, productoB, productoC, productoD, productoE, produc
 
 
 const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
-const precioMedio = Productos.filter(Producto => Producto.precio >= 1501 && Producto.precio <= 4000);
+const precioMedio = Productos.filter(Producto => Producto.precio <= 4000);
 const mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
 
 

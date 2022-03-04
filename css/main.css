@@ -55,6 +55,8 @@ body {
     display: flex;
     flex-flow: row;
     justify-content: center;
+    z-index: 1;
+    opacity: 1;
   }
   .main .barraNavegacion {
     display: none;
@@ -65,11 +67,12 @@ body {
     align-content: center;
   }
   .main .menuResponsive a {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     padding: 10px 0;
     text-align: center;
-    background: #8c8c8c;
+    background: black;
     color: white;
     font-weight: 800;
     border-bottom: 2px solid white;
@@ -89,7 +92,7 @@ body {
     left: 0.5rem;
     top: 1rem;
     width: 9rem;
-    height: 9rem;
+    height: 8rem;
     justify-content: center;
     align-items: flex-start;
     left: 10%;
@@ -468,23 +471,23 @@ article button:hover::before {
 
 @media only screen and (max-width: 800px) {
   article button {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     outline: none;
     cursor: pointer;
     border: none;
-    width: 170px;
+    width: 150px;
     padding: 0.5rem;
     margin: 0;
     font-family: inherit;
     font-size: inherit;
+    position: relative;
+    display: inline-block;
     letter-spacing: 0.05rem;
-    font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
+    justify-content: space-evenly;
     overflow: hidden;
     background: white;
     color: ghostwhite;
+    top: 20px;
   }
 }
 .conte_parent {

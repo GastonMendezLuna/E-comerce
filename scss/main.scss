@@ -75,6 +75,8 @@ body {
         display: flex;
         flex-flow: row;
         justify-content: center;
+        z-index: 1;
+        opacity: 1;
        
       }
       .barraNavegacion{
@@ -84,28 +86,32 @@ body {
         justify-content: center;
         list-style: none;
         align-content: center;
+        
     
       }
 
 
     
     .menuResponsive a{
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: 100vw;
         padding: 10px 0;
         text-align: center;
-        background: #8c8c8c;
+        background: black;
         color: white;
         font-weight: 800;
         border-bottom: 2px solid white;
         transition: all 1s;
         -webkit-transition: all 1s;
+ 
 
     }
 
     .menuResponsive a:hover{
         background: white;
         color: black;
+        
 
     }
 
@@ -118,10 +124,11 @@ body {
         left: 0.5rem;
         top: 1rem;
         width: 9rem;
-        height: 9rem;
+        height: 8rem;
         justify-content: center;
         align-items: flex-start;
         left: 10%;
+    
     }
     .container-Iconos{
         display: flex;
@@ -157,7 +164,9 @@ body {
     
 
  }
-     
+    
+ 
+ 
 
   & .carrousel{
     display: flex;
@@ -356,6 +365,7 @@ body {
     }
 
   }
+  
 
 
   & .textBienvenida{
