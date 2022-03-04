@@ -6,7 +6,7 @@ $("#menuHamburguesa").click(function () {
 
 
 
-class Producto{ 
+/*class Producto{ 
   constructor(nombre, stock, precio, categoria){
   this.nombre = nombre;
   this.stock = stock;
@@ -161,5 +161,5 @@ while (seguirComprando == "si") {
 
   seguirComprando = prompt("¿Desea comprar? si/no");
 } 
-
+*/
 
