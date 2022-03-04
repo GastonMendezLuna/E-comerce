@@ -413,25 +413,57 @@ body {
   text-align: center;
 }
 
-.tarjetas-Container {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100vw;
-  height: auto;
-  justify-content: space-evenly;
-  align-items: center;
+article button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  width: 180px;
+  padding: 0.9rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  justify-content: space-around;
+  overflow: hidden;
+  background: white;
+  color: ghostwhite;
 }
 
-.tarjeta-Producto {
-  display: flex;
-  flex-flow: row wrap;
-  width: 250px;
-  height: 250px;
-  border: 1px solid black;
-  margin: 20px 20px 20px 20px;
-  background: darkgrey;
-  text-align: center;
-  justify-content: center;
+article button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+article button:hover span {
+  color: black;
+}
+
+article button::before,
+article button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+article button::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+article button:hover::before {
+  transform: translate3d(100%, 0, 0);
 }
 
 .conte_parent {
@@ -547,14 +579,14 @@ body {
   font-size: 1.5em;
   color: #555;
 }
-.conte_parent .contenedor__Compra {
+.conte_parent .conte .contenedor__Compra {
   display: flex;
   flex-direction: row;
   justify-content: end;
   padding-top: 10px;
   padding-right: 25px;
 }
-.conte_parent .contenedor__Compra .compra {
+.conte_parent .conte .contenedor__Compra .compra {
   display: flex;
   width: 30px;
   height: auto;

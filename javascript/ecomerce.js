@@ -36,8 +36,8 @@ const productoB = new Producto("bolso rustico", 10, 2250, "tejido")
 const productoC = new Producto("atrapa sueños", 10, 1800, "macrame")
 const productoD = new Producto("cuadro tres partes", 10, 2700, "cuadro")
 const productoE = new Producto("pulsera macrame", 10, 500, "macrame")
-const productoF = new Producto("centro de mesa", 10, 1500, "mimbre")
-const productoG = new Producto("cuadro naturaleza", 10, 4700, "cuadro")
+const productoF = new Producto("centro de mesa", 10, 2500, "mimbre")
+const productoG = new Producto("cuadro naturaleza", 10, 4700, "cuadros")
 
 const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
 
@@ -47,10 +47,12 @@ const Productos = [productoA, productoB, productoC, productoD, productoE, produc
 const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
 const precioMedio = Productos.filter(Producto => Producto.precio >= 1501 && Producto.precio <= 4000);
 const mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
+
+
 const categoriaMimbre = Productos.filter(Producto => Producto.categoria == 'mimbre');
 const categoriaTejido = Productos.filter(Producto => Producto.categoria == 'tejido');
 const categoriaMacrame = Productos.filter(Producto => Producto.categoria == 'macrame');
-const categoriaCuadro = Productos.filter(Producto => Producto.categoria == 'cuadro');
+const categoriaCuadro = Productos.filter(Producto => Producto.categoria == 'cuadros');
 
 
 let filtroPrecio = parseInt(prompt('Quiere filtrar la lista de productos por precio? \n  Opcion 1 Menos de $1.500 \n Opcion 2 Entre $1.501 y $4.000 \n Opcion 3 Mas de $4.000'));
@@ -158,6 +160,6 @@ while (seguirComprando == "si") {
   );  
 
   seguirComprando = prompt("¿Desea comprar? si/no");
-}*/
+} 
 
 
