@@ -1,5 +1,5 @@
 $("#menuHamburguesa").click(function () {
-  $(".menuResponsive").toggle(300).addclass(".mostrar");
+  $(".menuResponsive").toggle(370).addclass(".mostrar");
 });
 
 

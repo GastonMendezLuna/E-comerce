@@ -416,17 +416,21 @@ body {
   text-align: center;
 }
 
+article {
+  display: flex;
+  flex-direction: row;
+}
+
 article button {
   outline: none;
   cursor: pointer;
   border: none;
-  width: 180px;
+  width: 200px;
   padding: 0.9rem;
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   position: relative;
-  display: inline-block;
   letter-spacing: 0.05rem;
   font-weight: 700;
   font-size: 17px;
@@ -434,6 +438,7 @@ article button {
   overflow: hidden;
   background: white;
   color: ghostwhite;
+  opacity: 0.99;
 }
 
 article button span {
@@ -470,24 +475,68 @@ article button:hover::before {
 }
 
 @media only screen and (max-width: 800px) {
+  article {
+    display: flex;
+    flex-flow: row wrap;
+    width: 97%;
+    height: auto;
+    justify-content: space-between;
+    border: 1px solid black;
+  }
+
   article button {
+    display: inline-block;
+    justify-content: stretch;
+    align-items: center;
     outline: none;
     cursor: pointer;
     border: none;
-    width: 150px;
+    width: 33%;
+    height: auto;
     padding: 0.5rem;
     margin: 0;
     font-family: inherit;
     font-size: inherit;
-    position: relative;
-    display: inline-block;
     letter-spacing: 0.05rem;
-    font-size: 12px;
-    justify-content: space-evenly;
+    font-weight: 700;
+    font-size: 15px;
     overflow: hidden;
     background: white;
     color: ghostwhite;
-    top: 20px;
+    opacity: 0.99;
+  }
+
+  article button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+  }
+
+  article button:hover span {
+    color: black;
+  }
+
+  article button::before,
+article button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  article button::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+
+  article button:hover::before {
+    transform: translate3d(100%, 0, 0);
   }
 }
 .conte_parent {
