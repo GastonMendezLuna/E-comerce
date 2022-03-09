@@ -6,7 +6,7 @@ $("#menuHamburguesa").click(function () {
 
 
 
-/*class Producto{ 
+class Producto{ 
   constructor(nombre, stock, precio, categoria){
   this.nombre = nombre;
   this.stock = stock;
@@ -37,14 +37,14 @@ const productoC = new Producto("atrapa sueños", 10, 1800, "macrame")
 const productoD = new Producto("cuadro tres partes", 10, 2700, "cuadro")
 const productoE = new Producto("pulsera macrame", 10, 500, "macrame")
 const productoF = new Producto("centro de mesa", 10, 2500, "mimbre")
-const productoG = new Producto("cuadro naturaleza", 10, 4700, "cuadros")
+const productoG = new Producto("cuadro naturaleza", 10, 4700, "cuadro")
 
 const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
 
 
 
 
-const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
+/* const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
 const precioMedio = Productos.filter(Producto => Producto.precio <= 4000);
 const mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
 
@@ -70,11 +70,51 @@ switch(filtroPrecio){
     break
   default:
     alert('No tenemos mas productos de ese precio');
-}
+} */
+let objetos = document.querySelector('.objetos');
+
+let boton1 = document.querySelector('.btn1')
+
+let boton2 = document.querySelector('.btn2')
+
+let boton3 = document.querySelector('.btn3')
+
+let boton4 = document.querySelector('.btn4')
+
+let boton5 = document.querySelector('.btn5')
+
+let boton6 = document.querySelector('.btn6')
+
+let boton7 = document.querySelector('.btn7')
+
+let boton8 = document.querySelector('.btn8')
+
+let boton9 = document.querySelector('.btn9')
 
 
 
-let filtroTipo = parseInt(prompt('Quiere filtrar la lista de productos por tipo de articulo? \n  Opcion 1 Articulos de mimbre \n Opcion 2 Articulos Tejidos \n Opcion 3 Articulos de Macrame \n Opcion 4 Cuadros'));
+let flagMimbre = 0;
+let flagTejido = 0;
+let flagMacrame = 0;
+let flagCuadro = 0;
+
+let todas = document.querySelector('.objetos')
+let Mimbre = document.querySelector('.categoriaMimbre')
+let Tejido = document.querySelector('.categoriaTejido')
+let Macrame = document.querySelector('.categoriaMacrame')
+let Cuadro = document.querySelector('.categoriaCuadro')
+
+boton5.addEventListener('click', function(){renderProductos("Mimbre, Tejido, Macrame, cuadro")})
+boton6.addEventListener('click', function(){renderProductos("Mimbre")})
+boton7.addEventListener('click', function(){renderProductos("Tejido")})
+boton8.addEventListener('click', function(){renderProductos("Macrame")})
+boton9.addEventListener('click', function(){renderProductos("Cuadro")})
+
+
+
+/* 
+
+let filtroCategoria= parseInt(prompt('Quiere filtrar la lista de productos por tipo de articulo? \n  Opcion 1 Articulos de mimbre \n Opcion 2 Articulos Tejidos \n Opcion 3 Articulos de Macrame \n Opcion 4 Cuadros'));
 
 switch(filtroCategoria){
 
@@ -93,7 +133,7 @@ switch(filtroCategoria){
   default:
     alert('No tenemos esos productos');
 }
-
+ */
 
 let montoApagar = 0;
 let cantidadComprada;
@@ -132,8 +172,8 @@ while (seguirComprando == "si") {
       Productos[6].nombre);
   
 
-  if (compra == Productos[0].nombre) {
-    compraFinal(Productos[0].stock, Productos[0].precio, Productos[0]);
+  if (compra == Producto[i].nombre) {
+    compraFinal(Producto[i].stock, Producto[i].precio, Producto[i]);
   } 
   else if (compra == Productos[1].nombre) {
     compraFinal(Productos[1].stock, Productos[1].precio, Productos[1]);
@@ -161,5 +201,5 @@ while (seguirComprando == "si") {
 
   seguirComprando = prompt("¿Desea comprar? si/no");
 } 
-*/
+
 
