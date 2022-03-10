@@ -550,6 +550,7 @@ article button::after {
   width: 290px;
   box-shadow: 0 0 7px #111;
   margin: 30px 30px;
+  /* From cssbuttons.io by @nikk7007 */
 }
 .conte_parent .conte .card {
   height: 200px;
@@ -655,17 +656,40 @@ article button::after {
 .conte_parent .conte .contenedor__Compra {
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  padding-top: 10px;
-  padding-right: 25px;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
-.conte_parent .conte .contenedor__Compra .compra {
-  display: flex;
-  width: 30px;
-  height: auto;
-  padding: 2px;
-  align-items: center;
-  justify-content: space-around;
+.conte_parent .conte div button {
+  padding: 0.4em 1.4em;
+  border: 2px solid black;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: white;
+}
+.conte_parent .conte div button::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: white;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+.conte_parent .conte div button:hover::before {
+  width: 105%;
+}
+.conte_parent .conte div button:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

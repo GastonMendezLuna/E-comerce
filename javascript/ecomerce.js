@@ -140,7 +140,7 @@ let cantidadComprada;
 
 
 
-function compraFinal(stock, precio, producto) {
+/*function compraFinal(stock, precio, producto) {
   let cantidadComprada = parseInt(prompt("¿cuantas unidades?"));
   if (cantidadComprada <= stock) {
        producto.stockSuficiente(stock, precio, cantidadComprada); 
