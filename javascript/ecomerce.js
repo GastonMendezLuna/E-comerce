@@ -66,15 +66,7 @@ class Producto{
   
   const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
 
-  
-  
-  
-  
-  
-  
-function mostrarProductos(){
-  
-}
+
   //OBJETOS SERIA EL CONTENEDOR DE TODOS LOS OBJETOS
 
   let objetos = document.querySelector('.objetos');
@@ -88,6 +80,7 @@ function mostrarProductos(){
   }
 
   let boton2 = document.querySelector('.btn2')
+
   boton2.addEventListener('click', menorPrecio)
   function menorPrecio(){
     menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
@@ -96,6 +89,7 @@ function mostrarProductos(){
   
   
   let boton3 = document.querySelector('.btn3')
+
   boton3.addEventListener('click', precioMedio)
   function precioMedio(){
     precioMedio = Productos.filter(Producto => Producto.precio <= 4000);
@@ -103,6 +97,7 @@ function mostrarProductos(){
   }
   
   let boton4 = document.querySelector('.btn4')
+
   boton4.addEventListener('click', mayorPrecio)
   function mayorPrecio(){
     mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
@@ -110,6 +105,7 @@ function mostrarProductos(){
   }
   
   let boton5 = document.querySelector('.btn5')
+
   boton5.addEventListener('click', todasCategorias)
   function todasCategorias(){
     todasCategorias = Productos.filter(Producto => Productos);
@@ -117,6 +113,7 @@ function mostrarProductos(){
   }
   
   let boton6 = document.querySelector('.btn6')
+
   boton6.addEventListener('click', categoriaMimbre)
   function categoriaMimbre(){
     categoriaMimbre = Productos.filter(Producto => Producto.categoria == 'mimbre');
@@ -124,6 +121,7 @@ function mostrarProductos(){
   }
   
   let boton7 = document.querySelector('.btn7')
+
   boton7.addEventListener('click', categoriaTejido)
   function categoriaTejido(){
     categoriaTejido = Productos.filter(Producto => Producto.categoria == 'tejido');
@@ -131,13 +129,15 @@ function mostrarProductos(){
   }
   
   let boton8 = document.querySelector('.btn8')
+
   boton8.addEventListener('click', categoriaMacrame)
   function categoriaMacrame(){
     categoriaMacrame = Productos.filter(Producto => Producto.categoria == 'macrame');
-    console.log(categoriaMacrame)
+    console.log(categoriaMacrame);
   }
   
   let boton9 = document.querySelector('.btn9')
+
   boton9.addEventListener('click', categoriaCuadro)
   function categoriaCuadro(){
     categoriaCuadro = Productos.filter(Producto => Producto.categoria == 'cuadro');
@@ -154,23 +154,14 @@ function mostrarProductos(){
   
   let todas = document.querySelector('.objetos')
   
-  let Mimbre = document.querySelector('.categoriaMimbre')
-  
-  let Tejido = document.querySelector('.categoriaTejido')
-  
-  let Macrame = document.querySelector('.categoriaMacrame')
-  
-  let Cuadro = document.querySelector('.categoriaCuadro')
-  
-  //aca pruebo eventos, por eso borre los otros. Vos no los borres.
-  
-  //vale aclarar que agregue al html esto:
-  
-  // PRUEBA
-
- 
-  
-  
+  let card1 = document.querySelector('#card1');
+  let card2 = document.querySelector('#card2');
+  let card3 = document.querySelector('#card3');
+  let card4 = document.querySelector('#card4');
+  let card5 = document.querySelector('#card5');
+  let card6 = document.querySelector('#card6');
+  let card7 = document.querySelector('#card7');
+   
   
   let montoApagar = 0;
   
@@ -255,6 +246,28 @@ function mostrarProductos(){
   seguirComprando = prompt('¿Desea comprar? si/no');
   
   }
+
+  let compra1 = document.querySelector('.compra1');
+  compra1.addEventListener('click', compraCesto)
+  function compraCesto(poducto){
+    compraFinal(productoA);
+
+  
+
+    console.log(compraFinal)
+  }
+
+  let compra2 = document.querySelector('.compra2');
+
+  let compra3 = document.querySelector('.compra3');
+
+  let compra4 = document.querySelector('.compra4');
+
+  let compra5 = document.querySelector('.compra5');
+
+  let compra6 = document.querySelector('.compra6');
+
+  let compra7 = document.querySelector('.compra7');
 
 
 /*class Producto{ 

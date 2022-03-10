@@ -239,6 +239,7 @@ article button:hover::before {
       color: #555;
 }
  
+
  & .contenedor__Compra{
   display: flex;
   flex-direction: row;
@@ -246,7 +247,7 @@ article button:hover::before {
   padding-right: 10px;
 
 }
-& div button {
+ & div button {
   padding: 0.4em 1em;
   border: 2px solid black;
   position: relative;
