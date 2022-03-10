@@ -1,3 +1,4 @@
+
 $("#menuHamburguesa").click(function () {
   $(".menuResponsive").toggle(370).addclass(".mostrar");
 });
@@ -44,7 +45,7 @@ const Productos = [productoA, productoB, productoC, productoD, productoE, produc
 
 
 
-/* const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
+ const menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
 const precioMedio = Productos.filter(Producto => Producto.precio <= 4000);
 const mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
 
@@ -112,7 +113,7 @@ boton9.addEventListener('click', function(){renderProductos("Cuadro")})
 
 
 
-/* 
+ 
 
 let filtroCategoria= parseInt(prompt('Quiere filtrar la lista de productos por tipo de articulo? \n  Opcion 1 Articulos de mimbre \n Opcion 2 Articulos Tejidos \n Opcion 3 Articulos de Macrame \n Opcion 4 Cuadros'));
 
@@ -133,14 +134,14 @@ switch(filtroCategoria){
   default:
     alert('No tenemos esos productos');
 }
- */
+ 
 
 let montoApagar = 0;
 let cantidadComprada;
 
 
 
-/*function compraFinal(stock, precio, producto) {
+function compraFinal(stock, precio, producto) {
   let cantidadComprada = parseInt(prompt("¿cuantas unidades?"));
   if (cantidadComprada <= stock) {
        producto.stockSuficiente(stock, precio, cantidadComprada); 
