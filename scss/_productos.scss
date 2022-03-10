@@ -239,14 +239,13 @@ article button:hover::before {
       color: #555;
 }
  
-& .contenedor__Compra{
+ & .contenedor__Compra{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding-right: 10px;
 
 }
-  /* From cssbuttons.io by @nikk7007 */
 & div button {
   padding: 0.4em 1.4em;
   border: 2px solid black;
@@ -281,6 +280,6 @@ article button:hover::before {
  
  & div button:hover {
   color: black;
- }
+ } 
 }
 }

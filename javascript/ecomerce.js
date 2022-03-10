@@ -71,7 +71,8 @@ switch(filtroPrecio){
     break
   default:
     alert('No tenemos mas productos de ese precio');
-} */
+} 
+
 let objetos = document.querySelector('.objetos');
 
 let boton1 = document.querySelector('.btn1')
