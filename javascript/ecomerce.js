@@ -4,10 +4,260 @@ $("#menuHamburguesa").click(function () {
 });
 
 
+//Importantisimo: faltaba la propertie id. Con ella nos guiaremos para acceder a productos y hacerlos unicos uno de otro
+
+class Producto{
+
+  constructor(id, nombre, stock, precio, categoria){
+  
+  this.id = id;
+  
+  this.nombre = nombre;
+  
+  this.stock = stock;
+  
+  this.precio = precio;
+  
+  this.categoria = categoria;
+  
+  this.venta = function (cantidadComprada){
+  
+  this.stock -= cantidadComprada
+  
+  console.log( 'Se vendieron'+ cantidadComprada + ' ' + ' ' + this.nombre)
+  
+  }
+  
+  this.faltaStock = function(cantidadComprada){
+  
+  this.stock < cantidadComprada
+  
+  alert('No tenemos mas unidades, tenemos hasta 10 '  + this.nombre)
+  
+  }
+  
+  this.stockSuficiente = function(stock, precio, cantidadComprada){
+  
+  stock -= cantidadComprada;
+  
+  montoApagar += cantidadComprada * precio;
+  
+  console.log( 'Te quedan en stock '  + stock + ' ' + this.nombre);
+  
+  }
+  
+  }
+  
+  }
+  
+  const productoA = new Producto(1, 'cesto mimbre', 10, 2700, 'mimbre')
+  
+  const productoB = new Producto(2, 'bolso rustico', 10, 2250, 'tejido')
+  
+  const productoC = new Producto(3, 'atrapa sueños', 10, 1800, 'macrame')
+  
+  const productoD = new Producto(4, 'cuadro tres partes', 10, 2700, 'cuadro')
+  
+  const productoE = new Producto(5, 'pulsera macrame', 10, 500, 'macrame')
+  
+  const productoF = new Producto(6, 'centro de mesa', 10, 2500, 'mimbre')
+  
+  const productoG = new Producto(7, 'cuadro naturaleza', 10, 4700, 'cuadro')
+  
+  const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
+
+  
+  
+  
+  
+  
+  
+function mostrarProductos(){
+  
+}
+  //OBJETOS SERIA EL CONTENEDOR DE TODOS LOS OBJETOS
+
+  let objetos = document.querySelector('.objetos');
+  
+  let boton1 = document.querySelector('.btn1')
+
+  boton1.addEventListener('click', todosPrecios)
+  function todosPrecios(){
+    todosPrecios = Productos.filter(Producto => Producto.precio >=1);
+    console.log(todosPrecios)
+  }
+
+  let boton2 = document.querySelector('.btn2')
+  boton2.addEventListener('click', menorPrecio)
+  function menorPrecio(){
+    menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
+    console.log(menorPrecio)
+  }
+  
+  
+  let boton3 = document.querySelector('.btn3')
+  boton3.addEventListener('click', precioMedio)
+  function precioMedio(){
+    precioMedio = Productos.filter(Producto => Producto.precio <= 4000);
+    console.log(precioMedio)
+  }
+  
+  let boton4 = document.querySelector('.btn4')
+  boton4.addEventListener('click', mayorPrecio)
+  function mayorPrecio(){
+    mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
+    console.log(mayorPrecio)
+  }
+  
+  let boton5 = document.querySelector('.btn5')
+  boton5.addEventListener('click', todasCategorias)
+  function todasCategorias(){
+    todasCategorias = Productos.filter(Producto => Productos);
+    console.log(todasCategorias)
+  }
+  
+  let boton6 = document.querySelector('.btn6')
+  boton6.addEventListener('click', categoriaMimbre)
+  function categoriaMimbre(){
+    categoriaMimbre = Productos.filter(Producto => Producto.categoria == 'mimbre');
+    console.log(categoriaMimbre)
+  }
+  
+  let boton7 = document.querySelector('.btn7')
+  boton7.addEventListener('click', categoriaTejido)
+  function categoriaTejido(){
+    categoriaTejido = Productos.filter(Producto => Producto.categoria == 'tejido');
+    console.log(categoriaTejido)
+  }
+  
+  let boton8 = document.querySelector('.btn8')
+  boton8.addEventListener('click', categoriaMacrame)
+  function categoriaMacrame(){
+    categoriaMacrame = Productos.filter(Producto => Producto.categoria == 'macrame');
+    console.log(categoriaMacrame)
+  }
+  
+  let boton9 = document.querySelector('.btn9')
+  boton9.addEventListener('click', categoriaCuadro)
+  function categoriaCuadro(){
+    categoriaCuadro = Productos.filter(Producto => Producto.categoria == 'cuadro');
+    console.log(categoriaCuadro)
+  }
+  
+  let flagMimbre = 0;
+  
+  let flagTejido = 0;
+  
+  let flagMacrame = 0;
+  
+  let flagCuadro = 0;
+  
+  let todas = document.querySelector('.objetos')
+  
+  let Mimbre = document.querySelector('.categoriaMimbre')
+  
+  let Tejido = document.querySelector('.categoriaTejido')
+  
+  let Macrame = document.querySelector('.categoriaMacrame')
+  
+  let Cuadro = document.querySelector('.categoriaCuadro')
+  
+  //aca pruebo eventos, por eso borre los otros. Vos no los borres.
+  
+  //vale aclarar que agregue al html esto:
+  
+  // PRUEBA
+
+ 
+  
+  
+  
+  let montoApagar = 0;
+  
+  let cantidadComprada;
+  
+  function compraFinal(producto) {
+  
+  let precio = producto.precio;
+  
+  let stock = producto.stock;
+  
+  let cantidadComprada = parseInt(prompt('¿cuantas unidades?'));
+  
+  if (cantidadComprada <= stock) {
+  
+  producto.stockSuficiente(stock, precio, cantidadComprada);
+  
+  producto.venta(cantidadComprada)
+  
+  }
+  
+  else {
+  
+  producto.faltaStock(stock);
+  
+  }
+  
+  }
+  
+  let seguirComprando = prompt("¿Desea comprar? si/no");
+  
+  while (seguirComprando == "si") {
+  
+    let compra = prompt("¿Qué artículo deseas comprar?" +
+  
+  '\n1 ' +
+  
+  Productos[0].nombre +
+  
+  '\n2 ' +
+  
+  Productos[1].nombre +
+  
+  '\n3 ' +
+  
+  Productos[2].nombre +
+  
+  '\n4 ' +
+  
+  Productos[3].nombre +
+  
+  '\n5 ' +
+  
+  Productos[4].nombre +
+  
+  '\n6 ' +
+  
+  Productos[5].nombre +
+  
+  '\n7 ' +
+  
+  Productos[6].nombre);
+  
+  //No funcionaba esto por varios motivos. El mas importante, no habia un ciclo for!
+  
+  //Itero sobre Productos.length porque es mi array de productos. No confundir con la clase Producto. Este array debe ir en minuscula, no en mayusc
+  
+  for(let i = 0; i < Productos.length; i++)
+  
+  {
+  
+  if (compra == Productos[i].id) //matcheo por id. Lo agrege a la clase constructora
+  
+  {
+  
+  compraFinal(Productos[i]); //con enviar el producto es suficiente, luego accedo a sus properties
+  
+  }
+  
+  }
+  
+  seguirComprando = prompt('¿Desea comprar? si/no');
+  
+  }
 
 
-
-class Producto{ 
+/*class Producto{ 
   constructor(nombre, stock, precio, categoria){
   this.nombre = nombre;
   this.stock = stock;
@@ -202,6 +452,6 @@ while (seguirComprando == "si") {
   );  
 
   seguirComprando = prompt("¿Desea comprar? si/no");
-} 
+} */
 
 
