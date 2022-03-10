@@ -659,7 +659,7 @@ article button::after {
   padding-right: 10px;
 }
 .conte_parent .conte div button {
-  padding: 0.4em 1.4em;
+  padding: 0.4em 1em;
   border: 2px solid black;
   position: relative;
   overflow: hidden;
