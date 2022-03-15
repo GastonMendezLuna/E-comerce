@@ -4,89 +4,111 @@ $("#menuHamburguesa").click(function () {
 });
 
 
-//Importantisimo: faltaba la propertie id. Con ella nos guiaremos para acceder a productos y hacerlos unicos uno de otro
 
-class Producto{
 
-  constructor(id, nombre, stock, precio, categoria){
-  
-  this.id = id;
-  
-  this.nombre = nombre;
-  
-  this.stock = stock;
-  
-  this.precio = precio;
-  
-  this.categoria = categoria;
+class producto{
 
-  this.foto = foto;
-  
+  constructor(idValor, nombreValor, stockValor, precioValor, categoriaValor, imgValor){
+  this.id = idValor;
+  this.nombre = nombreValor;
+  this.stock = stockValor;
+  this.precio = precioValor;
+  this.categoria = categoriaValor;
+  this.img = imgValor;
+
   this.venta = function (cantidadComprada){
-  
   this.stock -= cantidadComprada
-  
   console.log( 'Se vendieron'+ cantidadComprada + ' ' + ' ' + this.nombre)
-  
   }
-  
   this.faltaStock = function(cantidadComprada){
-  
   this.stock < cantidadComprada
-  
   alert('No tenemos mas unidades, tenemos hasta 10 '  + this.nombre)
-  
   }
-  
   this.stockSuficiente = function(stock, precio, cantidadComprada){
-  
   stock -= cantidadComprada;
-  
   montoApagar += cantidadComprada * precio;
-  
   console.log( 'Te quedan en stock '  + stock + ' ' + this.nombre);
-  
   }
-  
   }
+}
   
-  }
+  const productoA = new producto(1, 'cesto mimbre', 10, 2700, 'mimbre', "../img/card1.png")
   
-  const productoA = new Producto(1, 'cesto mimbre', 10, 2700, 'mimbre')
+  const productoB = new producto(2, 'bolso rustico', 10, 2250, 'tejido', "../img/card2.png")
   
-  const productoB = new Producto(2, 'bolso rustico', 10, 2250, 'tejido')
+  const productoC = new producto(3, 'atrapa sueños', 10, 1800, 'macrame', "../img/card3.png")
   
-  const productoC = new Producto(3, 'atrapa sueños', 10, 1800, 'macrame')
+  const productoD = new producto(4, 'cuadro tres partes', 10, 2700, 'cuadro', "../img/card4.png")
   
-  const productoD = new Producto(4, 'cuadro tres partes', 10, 2700, 'cuadro')
+  const productoE = new producto(5, 'pulsera macrame', 10, 500, 'macrame', "../img/card5.png")
   
-  const productoE = new Producto(5, 'pulsera macrame', 10, 500, 'macrame')
+  const productoF = new producto(6, 'centro de mesa', 10, 2500, 'mimbre', "../img/card6.png")
   
-  const productoF = new Producto(6, 'centro de mesa', 10, 2500, 'mimbre')
+  const productoG = new producto(7, 'cuadro naturaleza', 10, 4700, 'cuadro', "../img/card7.png")
   
-  const productoG = new Producto(7, 'cuadro naturaleza', 10, 4700, 'cuadro')
-  
-  const Productos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG];
+  const listaProductos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG]
 
+ 
+  
 
-  //OBJETOS SERIA EL CONTENEDOR DE TODOS LOS OBJETOS
-
+   
   let objetos = document.querySelector('.objetos');
   
   let boton1 = document.querySelector('.btn1')
 
+  /* for (const producto of listaProductos) {
+    let contenedor = document.createElement("div");
+    
+    contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <article><button id="boton"><span>Comprame!</span></button></article>
+                            </div>`
+
+
+    document.body.appendChild(contenedor);
+   
+  } */
+
   boton1.addEventListener('click', todosPrecios)
+  let flagtodosPrecios = 0;
   function todosPrecios(){
-    todosPrecios = Productos.filter(Producto => Producto.precio >=1);
-    console.log(todosPrecios)
+    todosPrecios = listaProductos.filter(Producto => Producto.precio >=1)
+
+    for (const producto of listaProductos) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <article><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></article>
+                            </div>`
+  
+  
+      document.body.appendChild(contenedor);
+     
+    }
   }
+
+  
 
   let boton2 = document.querySelector('.btn2')
 
   boton2.addEventListener('click', menorPrecio)
   function menorPrecio(){
-    menorPrecio = Productos.filter(Producto => Producto.precio <= 1500);
-    console.log(menorPrecio)
+    menorPrecio = listaProductos.filter(producto => producto.precio <= 1500);
+
+    for (const producto of menorPrecio) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <article><button id="boton"><span>Comprame!</span></button></article>
+                            </div>`
+  
+  
+      document.#containerCards.appendChild(contenedor);
+     
+    }
+    
   }
   
   
@@ -94,16 +116,38 @@ class Producto{
 
   boton3.addEventListener('click', precioMedio)
   function precioMedio(){
-    precioMedio = Productos.filter(Producto => Producto.precio <= 4000);
-    console.log(precioMedio)
+    precioMedio = listaProductos.filter(producto => producto.precio <= 4000);
+    for (const producto of precioMedio) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <article><button id="boton"><span>Comprame!</span></button></article>
+                            </div>`
+  
+  
+      document.body.appendChild(contenedor);
+     
+    }
   }
   
   let boton4 = document.querySelector('.btn4')
 
   boton4.addEventListener('click', mayorPrecio)
   function mayorPrecio(){
-    mayorPrecio = Productos.filter(Producto => Producto.precio >= 4001);
-    console.log(mayorPrecio)
+    mayorPrecio = listaProductos.filter(producto => producto.precio >= 4001);
+    for (const producto of mayorPrecio) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <article><button id="boton"><span>Comprame!</span></button></article>
+                            </div>`
+  
+  
+      document.body.appendChild(contenedor);
+     
+    }
   }
   
   let boton5 = document.querySelector('.btn5')
@@ -146,25 +190,21 @@ class Producto{
     console.log(categoriaCuadro)
   }
   
-  let flagMimbre = 0;
   
-  let flagTejido = 0;
   
-  let flagMacrame = 0;
-  
-  let flagCuadro = 0;
-  
-  let contenedor = document.querySelector('.tarjetas')
-  
-  let card1 = document.querySelector('.card1');
+  /* 
+   let card1 = document.querySelector('.card1');
   let card2 = document.querySelector('.card2');
   let card3 = document.querySelector('.card3');
   let card4 = document.querySelector('.card4');
   let card5 = document.querySelector('.card5');
   let card6 = document.querySelector('.card6');
-  let card7 = document.querySelector('.card7');
-   
+  let card7 = document.querySelector('.card7'); 
+
   
+}
+   
+
   let montoApagar = 0;
   
   let cantidadComprada;
@@ -269,9 +309,9 @@ class Producto{
 
   let compra6 = document.querySelector('.compra6');
 
-  let compra7 = document.querySelector('.compra7');
-
-
+  let compra7 = document.querySelector('.compra7'); */
+ 
+ 
 /*class Producto{ 
   constructor(nombre, stock, precio, categoria){
   this.nombre = nombre;

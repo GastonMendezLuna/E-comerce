@@ -132,15 +132,31 @@
    }
 }
 
+.containerCards{
+  
+}
 
 
- .tarjetas{
-     display: flex;
-     flex-flow: row wrap;
-     width: 100%;
-     height: 70%;
-     background-color: yellow;
-     border: 1px solid black;
-   }
+.card{
+  display: inline-block;
+  position: relative;
+  width: 350px;
+  height: 440px;
+  border: 10px solid black opacity($color: 0.9);
 
+  & .imagen{
+    width: 350px;
+    height: 400px;
+  }
+
+  & .botonTarjeta{
+    display: block;
+    position: absolute;
+    
+    
+    
+    border: 20px solid yellow;
+  }
+
+}
 
