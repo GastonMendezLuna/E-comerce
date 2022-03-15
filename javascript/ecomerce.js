@@ -19,6 +19,8 @@ class Producto{
   this.precio = precio;
   
   this.categoria = categoria;
+
+  this.foto = foto;
   
   this.venta = function (cantidadComprada){
   
@@ -152,15 +154,15 @@ class Producto{
   
   let flagCuadro = 0;
   
-  let todas = document.querySelector('.objetos')
+  let contenedor = document.querySelector('.tarjetas')
   
-  let card1 = document.querySelector('#card1');
-  let card2 = document.querySelector('#card2');
-  let card3 = document.querySelector('#card3');
-  let card4 = document.querySelector('#card4');
-  let card5 = document.querySelector('#card5');
-  let card6 = document.querySelector('#card6');
-  let card7 = document.querySelector('#card7');
+  let card1 = document.querySelector('.card1');
+  let card2 = document.querySelector('.card2');
+  let card3 = document.querySelector('.card3');
+  let card4 = document.querySelector('.card4');
+  let card5 = document.querySelector('.card5');
+  let card6 = document.querySelector('.card6');
+  let card7 = document.querySelector('.card7');
    
   
   let montoApagar = 0;

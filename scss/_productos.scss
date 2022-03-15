@@ -1,39 +1,50 @@
-article{
+.contenedor{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
+}
+
+ article{
   display:flex;
   flex-direction: row;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+ 
 }
-article button {
+ article #boton {
  outline: none;
  cursor: pointer;
  border: none;
- width: 200px;
- padding: 0.9rem;
+ overflow: hidden;
+ width: 151.7px;
+ padding: 0.45rem;
  margin: 0;
  font-family: inherit;
  font-size: inherit;
  position: relative;
- letter-spacing: 0.05rem;
+ letter-spacing: 0.07rem;
  font-weight: 700;
  font-size: 17px;
- justify-content: space-evenly;
- overflow: hidden;
+
  background: white;
  color: ghostwhite;
  opacity: 0.99;
 }
 
-article button span {
+ article #boton span {
  position: relative;
  z-index: 10;
  transition: color 0.4s;
 }
 
-article button:hover span {
+ article #boton:hover span {
  color: black;
 }
 
-article button::before,
-article button::after {
+ article #boton::before, article button::after {
  position: absolute;
  top: 0;
  left: 0;
@@ -42,7 +53,7 @@ article button::after {
  z-index: 0;
 }
 
-article button::before {
+ article #boton::before {
  content: "";
  background: #000;
  width: 120%;
@@ -51,7 +62,7 @@ article button::before {
  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
-article button:hover::before {
+ article #boton:hover::before {
  transform: translate3d(100%, 0, 0);
 }
 
@@ -65,7 +76,7 @@ article button:hover::before {
     border: 1px solid black;
     
   }
-  article button {
+  article #boton {
     display: inline-block;
     justify-content: stretch;
     align-items: center;
@@ -87,18 +98,18 @@ article button:hover::before {
     opacity: 0.99;
 
    }
-   article button span {
+   article #boton span {
     position: relative;
     z-index: 10;
     transition: color 0.4s;
    }
    
-   article button:hover span {
+   article #boton:hover span {
     color: black;
    }
    
-   article button::before,
-   article button::after {
+   article #boton::before,
+   article #boton::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,7 +118,7 @@ article button:hover::before {
     z-index: 0;
    }
    
-   article button::before {
+   article #boton::before {
     content: "";
     background: #000;
     width: 120%;
@@ -116,171 +127,20 @@ article button:hover::before {
     transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
    }
    
-   article button:hover::before {
+   article #boton:hover::before {
     transform: translate3d(100%, 0, 0);
    }
 }
 
-   
-.conte_parent{
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    flex-wrap:wrap;
-    
-  
 
-  .conte{
-      height: 390px;
-      width: 290px;
-      box-shadow:0 0 7px #111 ;
-      margin: 30px 30px;
-  
-    & .card{
-      height: 200px;
-      width: 100%;
-      margin-bottom: 80px;
-  }
-    & .card img{
-      margin: auto;
-      display: block;
-  }
-    & .cesto-Mimbre img{
-      height: 320px;
-      width: 300px;
-  }
-    & .cesto-Mimbre{
-       background-color: #111;
-  }
-    & .bolso-Rustico{
-      background-color: #111;
-  }
-    & .atrapasuenios{
-      background-color:#111;
-  }
-    & .cuadro{
-      background-color:#111;
-}
-    & .pulseraMacrame{
-       background-color:#111;
-}
-    & .centrodeMesa{
-      background-color:#111;
-}
-    & .cuadroNaturaleza{
-       background-color:#111;
-}
-    & .bolso-Rustico img{
-    height: 290px;
-    width: 285px;
-}
-    & .atrapasuenios img{
-    height: 290px;
-    width: 285px;
-}
 
-    & .pulseraMacrame img{
-    height: 240px;
-    width: 290px;
-}
-    & .centrodeMesa img{
-    height: 250px;
-    width: 291px;
-}
-    & .cuadroNaturaleza img{
-    height: 295px;
-    width: 290px;
-}
-  .conte .cuadro{
-    background-color: #111;
-}
-    & .cuadro img{
-    height: 275px;
-    width: 250px;
-}
-    & .informacion{
-      height: 30px;
-      width: 100%;
-}
-    & .informacion h1{
-      font-family: sans-serif;
-      font-size: 1.2em;
-      text-align: center;
-      color: #333;
-      margin-bottom: 23px;
-}
-    & .informacion p{
-      text-align: center;
-      font-family: sans-serif;
-      font-size: .9em;
-      color: #555;
-}
-    & .precio {
-      height:30px;
-      width: 85%;
-      margin: auto;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-}
-    & .box-precio{
-      width: 50px;
-}
-    & .precio1{
-      color: red;
-      font-size: .8em;
-}
-    &  .precio2{
-      font-size: 1em;
-}
-    & .shoping{
-      font-size: 1.5em;
-      color: #555;
-}
- 
+ .tarjetas{
+     display: flex;
+     flex-flow: row wrap;
+     width: 100%;
+     height: 70%;
+     background-color: yellow;
+     border: 1px solid black;
+   }
 
- & .contenedor__Compra{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 10px;
 
-}
- & div button {
-  padding: 0.4em 1em;
-  border: 2px solid black;
-  position: relative;
-  overflow: hidden;
-  background-color: black;
-  text-align: center;
-  font-size: 14px;
-  transition: .3s;
-  z-index: 1;
-  font-family: inherit;
-  color: white;
- }
- 
- & div button::before {
-  content: '';
-  width: 0;
-  height: 300%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  background: white;
-  transition: .5s ease;
-  display: block;
-  z-index: -1;
- }
- 
- & div button:hover::before {
-  width: 105%;
- }
- 
- & div button:hover {
-  color: black;
- } 
-}
-}
