@@ -43,7 +43,8 @@ body {
 .main .icono__Uno {
   display: flex;
   flex-flow: row wrap;
-  align-content: center;
+  align-items: center;
+  height: 95px;
 }
 .main .menuResponsive {
   display: none;
@@ -120,8 +121,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     width: 3rem;
-    height: 3rem;
-    top: 35px;
+    height: 3.8rem;
     right: 1rem;
   }
 }
@@ -287,6 +287,7 @@ body {
   font-family: "Gilda Display";
   font-size: 1.3rem;
   line-height: 25px;
+  justify-content: end;
 }
 .main .secciones__Container {
   display: flex;
@@ -379,7 +380,8 @@ body {
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
-.main .footer {
+
+.footer {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
@@ -388,11 +390,11 @@ body {
   align-items: center;
   background-color: #b5bac9;
 }
-.main .footer .texto__Patricia {
+.footer .texto__Patricia {
   font-size: 1.5rem;
   font-weight: 800;
 }
-.main .footer .texto__Direccion {
+.footer .texto__Direccion {
   font-size: 1.2rem;
 }
 
@@ -414,6 +416,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: auto;
 }
 
 .contenedor {
@@ -551,9 +560,10 @@ body {
 .containerCards {
   display: flex;
   flex-flow: row wrap;
-  width: 100vw;
+  width: 80vw;
   height: 90vh;
-  justify-content: space-between;
+  justify-content: space-around;
+  left: 2rem;
 }
 .containerCards .card {
   display: inline-block;

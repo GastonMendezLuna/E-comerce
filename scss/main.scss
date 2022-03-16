@@ -25,6 +25,7 @@ body {
     height: 6rem;
     justify-content: space-around;
     align-content: flex-start;
+    
   }
   & .barraNavegacion{
     display: flex;
@@ -34,6 +35,8 @@ body {
     justify-content: space-around;
     list-style: none;
     align-content: center;
+    
+  
 
   }
   
@@ -49,14 +52,18 @@ body {
       display: none;
   }
 
-
+  
 
   & .icono__Uno{
       display: flex;
       flex-flow: row wrap;
-      align-content: center;
+      align-items: center;
+      height: 95px;
+      
       
   }
+
+  
     
 
   & .menuResponsive{
@@ -104,7 +111,7 @@ body {
         border-bottom: 2px solid white;
         transition: all 1s;
         -webkit-transition: all 1s;
- 
+        
 
     }
 
@@ -117,6 +124,7 @@ body {
 
     .mostrar{
         display: block;
+        
     }
     .logoPagina{
         display: flex;
@@ -156,9 +164,9 @@ body {
         display: flex;
         flex-flow: row wrap;
         width: 3rem;
-        height: 3rem;
-        top: 35px;
+        height: 3.8rem;
         right: 1rem;
+      
     }
     
     
@@ -378,6 +386,7 @@ body {
     font-family: 'Gilda Display';
     font-size: 1.3rem;
     line-height: 25px;
+    justify-content: end;
  
   }
   & .secciones__Container{
@@ -500,11 +509,9 @@ body {
 
 }
     
+ }
 
-    
-    
-
-  & .footer{
+.footer{
     display: flex;
     flex-flow: row wrap;
     width: 100%;
@@ -525,11 +532,10 @@ body {
   }
   
 
-}
+
 
 @import "sobrenosotros";
 @import "productos";
-@import "pedidos";
 
 
 
