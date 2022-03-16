@@ -6,7 +6,7 @@
   height: auto;
 }
 
- article{
+ #buttons{
   display:flex;
   flex-direction: row;
   width: 100%;
@@ -14,7 +14,7 @@
   justify-content: space-around;
  
 }
- article #boton {
+#buttons #boton {
  outline: none;
  cursor: pointer;
  border: none;
@@ -34,17 +34,17 @@
  opacity: 0.99;
 }
 
- article #boton span {
+#buttons #boton span {
  position: relative;
  z-index: 10;
  transition: color 0.4s;
 }
 
- article #boton:hover span {
+#buttons #boton:hover span {
  color: black;
 }
 
- article #boton::before, article button::after {
+#buttons #boton::before, a#buttons #boton::after {
  position: absolute;
  top: 0;
  left: 0;
@@ -53,7 +53,7 @@
  z-index: 0;
 }
 
- article #boton::before {
+#buttons #boton::before {
  content: "";
  background: #000;
  width: 120%;
@@ -62,12 +62,12 @@
  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
- article #boton:hover::before {
+#buttons #boton:hover::before {
  transform: translate3d(100%, 0, 0);
 }
 
 @media only screen and (max-width: 800px) {
-  article{
+  #buttons{
     display:flex;
     flex-flow: row wrap;
     width: 97%;
@@ -76,7 +76,7 @@
     border: 1px solid black;
     
   }
-  article #boton {
+  #buttons #boton {
     display: inline-block;
     justify-content: stretch;
     align-items: center;
@@ -98,18 +98,18 @@
     opacity: 0.99;
 
    }
-   article #boton span {
+   #buttons #boton span {
     position: relative;
     z-index: 10;
     transition: color 0.4s;
    }
    
-   article #boton:hover span {
+   #buttons #boton:hover span {
     color: black;
    }
    
-   article #boton::before,
-   article #boton::after {
+   #buttons #boton::before,
+   #buttons #boton::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -118,7 +118,7 @@
     z-index: 0;
    }
    
-   article #boton::before {
+   #buttons #boton::before {
     content: "";
     background: #000;
     width: 120%;
@@ -127,22 +127,26 @@
     transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
    }
    
-   article #boton:hover::before {
+   #buttons #boton:hover::before {
     transform: translate3d(100%, 0, 0);
    }
 }
 
 .containerCards{
-  
-}
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 90vh;
+  justify-content: space-between;
 
 
-.card{
+
+& .card{
   display: inline-block;
   position: relative;
   width: 350px;
   height: 440px;
-  border: 10px solid black opacity($color: 0.9);
+  border: 5px double black;
 
   & .imagen{
     width: 350px;
@@ -153,10 +157,14 @@
     display: block;
     position: absolute;
     
-    
-    
-    border: 20px solid yellow;
   }
 
 }
+}
+.containerCarrito{
+  display: block;
+  position: relative;
+  right: 30px;
+}
+
 

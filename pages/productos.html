@@ -16,7 +16,7 @@
     <title>Alma Gesell Artesanias</title>
 </head>
 <body class='container'>
-    <main class="main">
+    <header class="main">
         <nav class="navbarContainer">
             
                     <a href="../index.html"><img class="logoPagina" src="../img/Alma gesell.gif" width="180" height="120" alt="logo pagina"></a>
@@ -50,7 +50,7 @@
         </nav>
     
         <!-- BOTONES DE FILTRADO -->
-        <article id="buttons" class="contenedor">
+        <div id="buttons" class="contenedor">
             <button id="boton" class="btn1"><span>Todos los precios</span></button>
             <button id="boton" class="btn2"><span>Hasta $1.500</span></button>
             <button id="boton" class="btn3"><span>Hasta $4.000</span></button>
@@ -60,16 +60,26 @@
             <button id="boton" class="btn7"><span>Tejido</span></button>
             <button id="boton" class="btn8"><span>Macrame</span></button>
             <button id="boton" class="btn9"><span>Cuadros</span></button>
+        </div>
             
             
-            
-          <div class="containerCards">
-          </div>
-        
-   
-
-
-        
+        <div class="containerCards">
+            <div class="row">
+                <!-- Elementos generados a partir de JS -->
+                <main id="items" class="containerCarrito">
+    
+                </main>
+                <!-- Carrito -->
+                <aside class="col-sm-4">
+                    <h2>Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: <span id="total"></span></p>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                </aside>
+            </div>
     
 
         
@@ -97,7 +107,7 @@
 
         </div>
 
-    </main>
+    </header>
 
 
 <script src="../javascript/liv.js"></script>

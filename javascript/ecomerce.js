@@ -79,7 +79,7 @@ class producto{
       
       contenedor.innerHTML = `<div class="card">
                             <img src=${producto.img} class="imagen"/>
-                            <article><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></article>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
                             </div>`
   
   
@@ -101,11 +101,11 @@ class producto{
       
       contenedor.innerHTML = `<div class="card">
                             <img src=${producto.img} class="imagen"/>
-                            <article><button id="boton"><span>Comprame!</span></button></article>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
                             </div>`
   
   
-      document.#containerCards.appendChild(contenedor);
+      document.body.appendChild(contenedor);
      
     }
     
@@ -122,7 +122,7 @@ class producto{
       
       contenedor.innerHTML = `<div class="card">
                             <img src=${producto.img} class="imagen"/>
-                            <article><button id="boton"><span>Comprame!</span></button></article>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
                             </div>`
   
   
@@ -141,7 +141,7 @@ class producto{
       
       contenedor.innerHTML = `<div class="card">
                             <img src=${producto.img} class="imagen"/>
-                            <article><button id="boton"><span>Comprame!</span></button></article>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
                             </div>`
   
   
