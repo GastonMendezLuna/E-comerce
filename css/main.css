@@ -586,6 +586,11 @@ body {
   position: absolute;
 }
 
+/* .carrito{
+  width: 400px;
+  height: 300px;
+  border: 1px double black;
+} */
 @media only screen and (max-width: 800px) {
   .tarjetas {
     display: flex;
@@ -611,6 +616,11 @@ body {
   .tarjetas .card .botonTarjeta {
     display: block;
     position: absolute;
+  }
+
+  .carrito {
+    width: 70%;
+    height: 40%;
   }
 }
 
