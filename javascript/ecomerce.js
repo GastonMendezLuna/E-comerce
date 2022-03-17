@@ -50,6 +50,8 @@ class producto{
   
   let tarjetas = document.querySelector ('.tarjetas')
 
+  renderProductos(listaProductos)
+
   let boton1 = document.querySelector('.btn1')
 
   boton1.addEventListener('click', menorPrecio)
