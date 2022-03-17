@@ -568,14 +568,13 @@ body {
   justify-items: center;
   width: 100%;
   height: 140vh;
-  background-color: beige;
 }
 .contenedor__Tarjetas .tarjetas {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   height: auto;
-  justify-content: space-around;
+  justify-content: center;
 }
 .contenedor__Tarjetas .card {
   display: inline-block;
@@ -584,6 +583,7 @@ body {
   height: 360px;
   top: 20px;
   padding: 10px;
+  justify-content: center;
   border: 5px double black;
 }
 .contenedor__Tarjetas .card .imagen {
@@ -603,7 +603,6 @@ body {
     justify-items: center;
     width: 100%;
     height: auto;
-    background-color: beige;
   }
   .contenedor__Tarjetas .tarjetas {
     display: flex;
