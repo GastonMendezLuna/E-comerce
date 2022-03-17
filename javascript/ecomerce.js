@@ -48,25 +48,7 @@ class producto{
   
   const listaProductos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG]
   
-  let tarjetas = document.querySelector ('.tarjetas');
-  
-  tarjetas.addEventListener('mousemove', renderProductos)
-  function renderProductos(){
-    const renderProductos = listaProductos.filter(producto => producto.precio >= 1);
-    
-    for (const producto of renderProductos ()) {
-      let contenedor = document.createElement("div");
-      
-      contenedor.innerHTML = `<div class="card">
-                            <img src=${producto.img} class="imagen"/>
-                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
-                            </div>`
-  
-  
-      tarjetas.appendChild(contenedor);
-     
-    }
-  }
+  let tarjetas = document.querySelector ('.tarjetas')
 
   let boton1 = document.querySelector('.btn1')
 
