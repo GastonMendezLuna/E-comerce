@@ -247,7 +247,7 @@ class producto{
   
 
    
-  /*
+  /* 
   let montoApagar = 0;
   
   let cantidadComprada;
@@ -322,10 +322,10 @@ class producto{
 
   let compra6 = document.querySelector('.compra6');
 
-  let compra7 = document.querySelector('.compra7'); */
+  let compra7 = document.querySelector('.compra7'); 
  
  
-/*class Producto{ 
+class Producto{ 
   constructor(nombre, stock, precio, categoria){
   this.nombre = nombre;
   this.stock = stock;
@@ -517,6 +517,6 @@ while (seguirComprando == "si") {
   );  
 
   seguirComprando = prompt("¿Desea comprar? si/no");
-} */
+} 
 
-
+ */
