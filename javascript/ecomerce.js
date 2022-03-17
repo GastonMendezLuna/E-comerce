@@ -47,34 +47,14 @@ class producto{
   const productoG = new producto(7, 'cuadro naturaleza', 10, 4700, 'cuadro', "../img/card7.png")
   
   const listaProductos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG]
-
- 
   
-
-   
-  let objetos = document.querySelector('.objetos');
+  let tarjetas = document.querySelector ('.tarjetas');
   
-  let boton1 = document.querySelector('.btn1')
-
-  /* for (const producto of listaProductos) {
-    let contenedor = document.createElement("div");
+  tarjetas.addEventListener('mousemove', renderProductos)
+  function renderProductos(){
+    const renderProductos = listaProductos.filter(producto => producto.precio >= 1);
     
-    contenedor.innerHTML = `<div class="card">
-                            <img src=${producto.img} class="imagen"/>
-                            <article><button id="boton"><span>Comprame!</span></button></article>
-                            </div>`
-
-
-    document.body.appendChild(contenedor);
-   
-  } */
-
-  boton1.addEventListener('click', todosPrecios)
-  let flagtodosPrecios = 0;
-  function todosPrecios(){
-    todosPrecios = listaProductos.filter(Producto => Producto.precio >=1)
-
-    for (const producto of listaProductos) {
+    for (const producto of renderProductos ()) {
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `<div class="card">
@@ -83,18 +63,20 @@ class producto{
                             </div>`
   
   
-      document.body.appendChild(contenedor);
+      tarjetas.appendChild(contenedor);
      
     }
   }
 
-  
+  let boton1 = document.querySelector('.btn1')
 
-  let boton2 = document.querySelector('.btn2')
+  boton1.addEventListener('click', menorPrecio)
 
-  boton2.addEventListener('click', menorPrecio)
   function menorPrecio(){
-    menorPrecio = listaProductos.filter(producto => producto.precio <= 1500);
+
+    const menorPrecio = listaProductos.filter(producto => producto.precio <= 1500);
+     
+    tarjetas.innerHTML= ''
 
     for (const producto of menorPrecio) {
       let contenedor = document.createElement("div");
@@ -103,20 +85,25 @@ class producto{
                             <img src=${producto.img} class="imagen"/>
                             <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
                             </div>`
-  
-  
-      document.body.appendChild(contenedor);
+      tarjetas.appendChild(contenedor);
+      
+      
      
     }
     
   }
   
   
-  let boton3 = document.querySelector('.btn3')
+  let boton2 = document.querySelector('.btn2')
 
-  boton3.addEventListener('click', precioMedio)
+  boton2.addEventListener('click', precioMedio)
+
   function precioMedio(){
-    precioMedio = listaProductos.filter(producto => producto.precio <= 4000);
+
+    const precioMedio = listaProductos.filter(producto => producto.precio <= 4000);
+    
+    tarjetas.innerHTML= ''
+
     for (const producto of precioMedio) {
       let contenedor = document.createElement("div");
       
@@ -126,16 +113,21 @@ class producto{
                             </div>`
   
   
-      document.body.appendChild(contenedor);
+      tarjetas.appendChild(contenedor);
      
     }
   }
   
-  let boton4 = document.querySelector('.btn4')
+  let boton3 = document.querySelector('.btn3')
 
-  boton4.addEventListener('click', mayorPrecio)
+  boton3.addEventListener('click', mayorPrecio)
+
   function mayorPrecio(){
-    mayorPrecio = listaProductos.filter(producto => producto.precio >= 4001);
+
+    const mayorPrecio = listaProductos.filter(producto => producto.precio >= 4001);
+
+    tarjetas.innerHTML= ''
+
     for (const producto of mayorPrecio) {
       let contenedor = document.createElement("div");
       
@@ -145,62 +137,131 @@ class producto{
                             </div>`
   
   
-      document.body.appendChild(contenedor);
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
+  
+  
+  
+  let boton4 = document.querySelector('.btn4')
+
+  boton4.addEventListener('click', categoriaMimbre)
+
+  function categoriaMimbre(){
+
+    const categoriaMimbre = listaProductos.filter(producto => producto.categoria == 'mimbre');
+
+    tarjetas.innerHTML= ''
+    
+    for (const producto of categoriaMimbre) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
+                            </div>`
+  
+  
+      tarjetas.appendChild(contenedor);
      
     }
   }
   
   let boton5 = document.querySelector('.btn5')
 
-  boton5.addEventListener('click', todasCategorias)
-  function todasCategorias(){
-    todasCategorias = Productos.filter(Producto => Productos);
-    console.log(todasCategorias)
+  boton5.addEventListener('click', categoriaTejido)
+
+  function categoriaTejido(){
+    const categoriaTejido = listaProductos.filter(producto => producto.categoria == 'tejido');
+
+    tarjetas.innerHTML= ''
+
+    for (const producto of categoriaTejido) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
+                            </div>`
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
   }
   
   let boton6 = document.querySelector('.btn6')
 
-  boton6.addEventListener('click', categoriaMimbre)
-  function categoriaMimbre(){
-    categoriaMimbre = Productos.filter(Producto => Producto.categoria == 'mimbre');
-    console.log(categoriaMimbre)
+  boton6.addEventListener('click', categoriaMacrame)
+
+  function categoriaMacrame(){
+    const categoriaMacrame = listaProductos.filter(producto => producto.categoria == 'macrame');
+
+    tarjetas.innerHTML= ''
+    
+    for (const producto of categoriaMacrame) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
+                            </div>`
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
   }
   
   let boton7 = document.querySelector('.btn7')
 
-  boton7.addEventListener('click', categoriaTejido)
-  function categoriaTejido(){
-    categoriaTejido = Productos.filter(Producto => Producto.categoria == 'tejido');
-    console.log(categoriaTejido)
+  boton7.addEventListener('click', categoriaCuadro)
+
+  function categoriaCuadro(){
+    const categoriaCuadro = listaProductos.filter(producto => producto.categoria == 'cuadro');
+
+    tarjetas.innerHTML= ''
+    
+    for (const producto of categoriaCuadro) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
+                            </div>`
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
   }
   
   let boton8 = document.querySelector('.btn8')
 
-  boton8.addEventListener('click', categoriaMacrame)
-  function categoriaMacrame(){
-    categoriaMacrame = Productos.filter(Producto => Producto.categoria == 'macrame');
-    console.log(categoriaMacrame);
-  }
-  
-  let boton9 = document.querySelector('.btn9')
+  boton8.addEventListener('click', renderProductos)
 
-  boton9.addEventListener('click', categoriaCuadro)
-  function categoriaCuadro(){
-    categoriaCuadro = Productos.filter(Producto => Producto.categoria == 'cuadro');
-    console.log(categoriaCuadro)
-  }
+  function renderProductos(){
+    const renderProductos = listaProductos.filter(producto => producto.precio >= 1);
+
+    tarjetas.innerHTML= ''
+
+    for (const producto of renderProductos) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `<div class="card">
+                            <img src=${producto.img} class="imagen"/>
+                            <div id="buttons"><button id="boton" class="botonTarjeta"><span>Comprame!</span></button></div>
+                            </div>`
   
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
   
   
   /* 
-   let card1 = document.querySelector('.card1');
-  let card2 = document.querySelector('.card2');
-  let card3 = document.querySelector('.card3');
-  let card4 = document.querySelector('.card4');
-  let card5 = document.querySelector('.card5');
-  let card6 = document.querySelector('.card6');
-  let card7 = document.querySelector('.card7'); 
-
   
 }
    
@@ -235,38 +296,8 @@ class producto{
   
   let seguirComprando = prompt("¿Desea comprar? si/no");
   
-  while (seguirComprando == "si") {
   
-    let compra = prompt("¿Qué artículo deseas comprar?" +
-  
-  '\n1 ' +
-  
-  Productos[0].nombre +
-  
-  '\n2 ' +
-  
-  Productos[1].nombre +
-  
-  '\n3 ' +
-  
-  Productos[2].nombre +
-  
-  '\n4 ' +
-  
-  Productos[3].nombre +
-  
-  '\n5 ' +
-  
-  Productos[4].nombre +
-  
-  '\n6 ' +
-  
-  Productos[5].nombre +
-  
-  '\n7 ' +
-  
-  Productos[6].nombre);
-  
+ 
   //No funcionaba esto por varios motivos. El mas importante, no habia un ciclo for!
   
   //Itero sobre Productos.length porque es mi array de productos. No confundir con la clase Producto. Este array debe ir en minuscula, no en mayusc
@@ -400,10 +431,7 @@ let boton9 = document.querySelector('.btn9')
 
 
 
-let flagMimbre = 0;
-let flagTejido = 0;
-let flagMacrame = 0;
-let flagCuadro = 0;
+
 
 let todas = document.querySelector('.objetos')
 let Mimbre = document.querySelector('.categoriaMimbre')
