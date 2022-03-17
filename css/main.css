@@ -560,35 +560,28 @@ body {
     transform: translate3d(100%, 0, 0);
   }
 }
-.contenedor__Tarjetas {
+.tarjetas {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   justify-items: center;
   width: 100%;
-  height: 140vh;
+  min-height: 50rem;
 }
-.contenedor__Tarjetas .tarjetas {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  height: auto;
-  justify-content: space-around;
-}
-.contenedor__Tarjetas .card {
+.tarjetas .card {
   display: inline-block;
   position: relative;
   width: 260px;
   height: 360px;
-  top: 20px;
-  padding: 10px;
+  top: 10px;
+  padding: 0 10px 0 10px;
   border: 5px double black;
 }
-.contenedor__Tarjetas .card .imagen {
+.tarjetas .card .imagen {
   width: 250px;
   height: 310px;
 }
-.contenedor__Tarjetas .card .botonTarjeta {
+.tarjetas .card .botonTarjeta {
   display: block;
   position: absolute;
 }
