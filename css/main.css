@@ -567,14 +567,14 @@ body {
   justify-content: space-around;
   justify-items: center;
   width: 100%;
-  height: 140vh;
+  height: auto;
 }
 .contenedor__Tarjetas .tarjetas {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   height: auto;
-  justify-content: center;
+  justify-content: space-around;
 }
 .contenedor__Tarjetas .card {
   display: inline-block;
@@ -583,7 +583,6 @@ body {
   height: 360px;
   top: 20px;
   padding: 10px;
-  justify-content: center;
   border: 5px double black;
 }
 .contenedor__Tarjetas .card .imagen {

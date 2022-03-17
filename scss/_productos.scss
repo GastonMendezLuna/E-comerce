@@ -152,15 +152,14 @@ body {
   justify-content: space-around;
   justify-items: center;
   width: 100%;
-  height: 140vh;
-  
+  height: auto;
 
 & .tarjetas{
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   height: auto;
-  justify-content: center;
+  justify-content: space-around;
   
   
 }
@@ -172,7 +171,6 @@ body {
   height: 360px;
   top: 20px;
   padding: 10px;
-  justify-content: center;
   border: 5px double black;
 
   & .imagen{
@@ -200,7 +198,7 @@ body {
     justify-items: center;
     width: 100%;
     height: auto;
-    
+   
     
   
   & .tarjetas{
