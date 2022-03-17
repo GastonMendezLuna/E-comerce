@@ -243,11 +243,11 @@ class producto{
   }
   
   
-  /* 
-  
-}
-   
 
+  
+
+   
+  /*
   let montoApagar = 0;
   
   let cantidadComprada;
@@ -288,11 +288,11 @@ class producto{
   
   {
   
-  if (compra == Productos[i].id) //matcheo por id. Lo agrege a la clase constructora
+  if (compra == listaProductos[i].id) //matcheo por id. Lo agrege a la clase constructora
   
   {
   
-  compraFinal(Productos[i]); //con enviar el producto es suficiente, luego accedo a sus properties
+  compraFinal(listaProductos[i]); //con enviar el producto es suficiente, luego accedo a sus properties
   
   }
   

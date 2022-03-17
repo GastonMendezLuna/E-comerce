@@ -83,8 +83,9 @@ body {
     flex-flow: row wrap;
     width: 97%;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
     
+   
     
   }
   #buttons #boton {
@@ -94,7 +95,7 @@ body {
     outline: none;
     cursor: pointer;
     border: none;
-    width: 33%;
+    width: 50%;
     height: auto;
     padding: 0.5rem;
     margin: 0;
@@ -107,6 +108,7 @@ body {
     background: white;
     color: ghostwhite;
     opacity: 0.99;
+    
 
    }
    #buttons #boton span {
@@ -150,8 +152,8 @@ body {
   justify-content: space-around;
   justify-items: center;
   width: 100%;
-  height: auto;
-  
+  height: 140vh;
+  background-color: beige;
 
 & .tarjetas{
   display: flex;
@@ -181,9 +183,14 @@ body {
     display: block;
     position: absolute;
     
+    
   }
 
 }
+
+
+}
+
 @media only screen and (max-width: 800px) {
   .contenedor__Tarjetas{
     display: flex;
@@ -191,7 +198,8 @@ body {
     justify-content: space-around;
     justify-items: center;
     width: 100%;
-    height: 200vh;
+    height: auto;
+    background-color: beige;
     
   
   & .tarjetas{
@@ -207,48 +215,27 @@ body {
   & .card{
     display: inline-block;
     position: relative;
-    width: 310px;
-    height: 400px;
-    top: 20px;
-    padding: 10px;
+    width: 260px;
+    height: 360px;
+    top: 30px;
+    bottom: 30px;
+    padding: 20px;
     border: 5px double black;
+    justify-content: center;
   
     & .imagen{
-      width: 300px;
-      height: 360px;
+      width: 250px;
+      height: 310px;
     }
   
     & .botonTarjeta{
       display: block;
       position: absolute;
-      justify-content: center;
+      
+      
       
     }
-
-}
+  
   }
 }
 }
-
-/*& .contenedor__Aside{
-  display: flex;
-  flex-direction: column;
-  justify-items: start;
-  width: 20%;
-  height: 100%;
-  background-color: blue;
-
-}
-
-
-& .aside{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  margin-top: auto;
-  background-color:green;
-  
-  
-
-}*/
