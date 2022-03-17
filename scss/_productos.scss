@@ -152,7 +152,8 @@ body {
   justify-content: space-around;
   justify-items: center;
   width: 100%;
-  height: auto;
+  height: 140vh;
+  background-color: beige;
 
 & .tarjetas{
   display: flex;
@@ -198,7 +199,7 @@ body {
     justify-items: center;
     width: 100%;
     height: auto;
-   
+    background-color: beige;
     
   
   & .tarjetas{
