@@ -419,7 +419,7 @@ body {
 }
 
 body {
-  min-height: 100%;
+  min-height: 80%;
 }
 
 .container {
@@ -563,7 +563,7 @@ body {
 .tarjetas {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   justify-items: center;
   width: 100%;
 }
@@ -572,7 +572,6 @@ body {
   position: relative;
   width: 280px;
   height: 360px;
-  top: 25px;
   padding: 0 35px 0 35px;
 }
 .tarjetas .card .imagen {
@@ -585,9 +584,10 @@ body {
   width: 100%;
   height: 40%;
   bottom: 150px;
-  left: 30px;
-  font-size: 14px;
-  line-height: 10px;
+  left: 10px;
+  font-size: 16px;
+  line-height: 8px;
+  text-align: center;
 }
 .tarjetas .card .botonTarjeta {
   display: block;
@@ -615,6 +615,17 @@ body {
   .tarjetas .card .imagen {
     width: 260px;
     height: 310px;
+  }
+  .tarjetas .card .encuadrarTexto {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40%;
+    bottom: 150px;
+    left: 10px;
+    font-size: 16px;
+    line-height: 8px;
+    text-align: center;
   }
   .tarjetas .card .botonTarjeta {
     display: block;
