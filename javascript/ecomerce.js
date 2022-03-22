@@ -33,19 +33,19 @@ class Producto{
   }
 }
   
-  const productoA = new Producto(1, 'cesto mimbre', 10, 2700, 'mimbre', "../img/card1.png")
+  const productoA = new Producto(1, 'Cesto mimbre', 10, 2700, 'mimbre', "../img/card1.png")
   
-  const productoB = new Producto(2, 'bolso rustico', 10, 2250, 'tejido', "../img/card2.png")
+  const productoB = new Producto(2, 'Bolso rustico', 10, 2250, 'tejido', "../img/card2.png")
   
-  const productoC = new Producto(3, 'atrapa sueños', 10, 1800, 'macrame', "../img/card3.png")
+  const productoC = new Producto(3, 'Atrapa sueños', 10, 1800, 'macrame', "../img/card3.png")
   
-  const productoD = new Producto(4, 'cuadro tres partes', 10, 2700, 'cuadro', "../img/card4.png")
+  const productoD = new Producto(4, 'Cuadro tres partes', 10, 2700, 'cuadro', "../img/card4.png")
   
-  const productoE = new Producto(5, 'pulsera macrame', 10, 500, 'macrame', "../img/card5.png")
+  const productoE = new Producto(5, 'Pulsera macrame', 10, 500, 'macrame', "../img/card5.png")
   
-  const productoF = new Producto(6, 'centro de mesa', 10, 2500, 'mimbre', "../img/card6.png")
+  const productoF = new Producto(6, 'Centro de mesa', 10, 2500, 'mimbre', "../img/card6.png")
   
-  const productoG = new Producto(7, 'cuadro naturaleza', 10, 4700, 'cuadro', "../img/card7.png")
+  const productoG = new Producto(7, 'Cuadro naturaleza', 10, 4700, 'cuadro', "../img/card7.png")
   
   const listaProductos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG]
   
@@ -67,11 +67,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
       tarjetas.appendChild(contenedor);
       
@@ -96,11 +100,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
   
   
@@ -123,11 +131,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
   
   
@@ -151,11 +163,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
   
   
@@ -177,11 +193,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
   
   
@@ -203,11 +223,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
   
   
@@ -229,11 +253,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
   
   
@@ -255,11 +283,15 @@ class Producto{
       let contenedor = document.createElement("div");
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
   
   
@@ -284,11 +316,15 @@ class Producto{
   
       
       contenedor.innerHTML = `
-        <img class="gallery__img" src="${producto.img}"/>
-        <h3>${producto.nombre}</h3>
-        <b>$${producto.precio}</b>
-        <p>Stock: ${producto.stock} unidades</p>
-        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+          <div class="card">
+            <img class="imagen" src="${producto.img}"/>
+            <div class="encuadrarTexto">
+            <h3>${producto.nombre}</h3>
+            <b>$${producto.precio}</b>
+            <p>Stock: ${producto.stock} unidades</p>
+            <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                    </div>
+          </div>
                           `
 
 
