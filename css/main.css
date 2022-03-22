@@ -445,7 +445,7 @@ body {
   justify-content: space-around;
 }
 
-#buttons #boton {
+#buttons #btn {
   outline: none;
   cursor: pointer;
   border: none;
@@ -464,17 +464,17 @@ body {
   opacity: 0.99;
 }
 
-#buttons #boton span {
+#buttons #btn span {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
 }
 
-#buttons #boton:hover span {
+#buttons #btn:hover span {
   color: black;
 }
 
-#buttons #boton::before, a#buttons #boton::after {
+#buttons #btn::before, a#buttons #btn::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -483,7 +483,7 @@ body {
   z-index: 0;
 }
 
-#buttons #boton::before {
+#buttons #btn::before {
   content: "";
   background: #000;
   width: 120%;
@@ -492,7 +492,7 @@ body {
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
-#buttons #boton:hover::before {
+#buttons #btn:hover::before {
   transform: translate3d(100%, 0, 0);
 }
 
@@ -505,7 +505,7 @@ body {
     justify-content: center;
   }
 
-  #buttons #boton {
+  #buttons #btn {
     display: inline-block;
     justify-content: stretch;
     align-items: center;
@@ -527,18 +527,18 @@ body {
     opacity: 0.99;
   }
 
-  #buttons #boton span {
+  #buttons #btn span {
     position: relative;
     z-index: 10;
     transition: color 0.4s;
   }
 
-  #buttons #boton:hover span {
+  #buttons #btn:hover span {
     color: black;
   }
 
-  #buttons #boton::before,
-#buttons #boton::after {
+  #buttons #btn::before,
+#buttons #btn::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -547,7 +547,7 @@ body {
     z-index: 0;
   }
 
-  #buttons #boton::before {
+  #buttons #btn::before {
     content: "";
     background: #000;
     width: 120%;
@@ -556,7 +556,7 @@ body {
     transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
   }
 
-  #buttons #boton:hover::before {
+  #buttons #btn:hover::before {
     transform: translate3d(100%, 0, 0);
   }
 }
@@ -586,11 +586,6 @@ body {
   position: absolute;
 }
 
-/* .carrito{
-  width: 400px;
-  height: 300px;
-  border: 1px double black;
-} */
 @media only screen and (max-width: 800px) {
   .tarjetas {
     display: flex;
