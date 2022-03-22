@@ -53,6 +53,220 @@ class Producto{
 
   const botonVaciar = document.querySelector('.btnVaciar');
 
+  let boton1 = document.querySelector('.btn1');
+
+  boton1.addEventListener('click', menorPrecio)
+
+  function menorPrecio(){
+
+    const menorPrecio = listaProductos.filter(producto => producto.precio <= 1500);
+     
+    tarjetas.innerHTML= ''
+
+    for (const producto of menorPrecio) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+      tarjetas.appendChild(contenedor);
+      
+      let compra1 = document.getElementById('#producto.1')
+      
+     
+    }
+    
+  }
+  
+  let boton2 = document.querySelector('.btn2')
+
+  boton2.addEventListener('click', precioMedio)
+
+  function precioMedio(){
+
+    const precioMedio = listaProductos.filter(producto => producto.precio <= 4000);
+    
+    tarjetas.innerHTML= ''
+
+    for (const producto of precioMedio) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
+  
+  let boton3 = document.querySelector('.btn3')
+
+  boton3.addEventListener('click', mayorPrecio)
+
+  function mayorPrecio(){
+
+    const mayorPrecio = listaProductos.filter(producto => producto.precio >= 4001);
+
+    tarjetas.innerHTML= ''
+
+    for (const producto of mayorPrecio) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
+  
+  
+  let boton4 = document.querySelector('.btn4')
+
+  boton4.addEventListener('click', categoriaMimbre)
+
+  function categoriaMimbre(){
+
+    const categoriaMimbre = listaProductos.filter(producto => producto.categoria == 'mimbre');
+
+    tarjetas.innerHTML= ''
+    
+    for (const producto of categoriaMimbre) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
+  
+  let boton5 = document.querySelector('.btn5')
+
+  boton5.addEventListener('click', categoriaTejido)
+
+  function categoriaTejido(){
+    const categoriaTejido = listaProductos.filter(producto => producto.categoria == 'tejido');
+
+    tarjetas.innerHTML= ''
+
+    for (const producto of categoriaTejido) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
+  
+  let boton6 = document.querySelector('.btn6')
+
+  boton6.addEventListener('click', categoriaMacrame)
+
+  function categoriaMacrame(){
+    const categoriaMacrame = listaProductos.filter(producto => producto.categoria == 'macrame');
+
+    tarjetas.innerHTML= ''
+    
+    for (const producto of categoriaMacrame) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
+  
+  let boton7 = document.querySelector('.btn7')
+
+  boton7.addEventListener('click', categoriaCuadro)
+
+  function categoriaCuadro(){
+    const categoriaCuadro = listaProductos.filter(producto => producto.categoria == 'cuadro');
+
+    tarjetas.innerHTML= ''
+    
+    for (const producto of categoriaCuadro) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
+  
+  let boton8 = document.querySelector('.btn8')
+
+  boton8.addEventListener('click', renderProductos)
+
+  function renderProductos(){
+    const renderProductos = listaProductos.filter(producto => producto.precio >= 1);
+
+    tarjetas.innerHTML= ''
+
+    for (const producto of renderProductos) {
+      let contenedor = document.createElement("div");
+      
+      contenedor.innerHTML = `
+        <img class="gallery__img" src="${producto.img}"/>
+        <h3>${producto.nombre}</h3>
+        <b>$${producto.precio}</b>
+        <p>Stock: ${producto.stock} unidades</p>
+        <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" class="btn" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
+                          `
+  
+  
+      tarjetas.appendChild(contenedor);
+     
+    }
+  }
   
   
   let cantidadComprada = 0;
@@ -154,7 +368,7 @@ class Producto{
     // Limpiamos los productos guardados
     const carrito = [];
     // Renderizamos los cambios
-    vistaTotal();
+   
     // Borra LocalStorage
     localStorage.clear();
   }
