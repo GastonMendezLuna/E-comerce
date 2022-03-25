@@ -364,14 +364,12 @@ $("#menuHamburguesa").click(function () {
     
     function faltaStock(Producto) {
       console.log("No nos queda de eso ):");
-      let inputPrecio = document.querySelector(".total-2");
-      inputPrecio.innerHTML = "";
-    
-      let contenedor = document.createElement("div");
-    
-      contenedor.innerHTML = `<div class="elTotal-2"">
-                                <b>No tenemos stock suficiente de ${Producto.nombre}</b>`;
-      inputPrecio.appendChild(contenedor);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No tenemos mas stock del producto seleccionado',
+        footer: '<a href="https://shortest.link/2SXx">Además hacemos diseños a pedido, escribinos a nuestro Whatsapp</a>'
+      })
     }
     
     
@@ -401,11 +399,26 @@ $("#menuHamburguesa").click(function () {
     botonVaciar.addEventListener('click', vaciarCarrito);
   
     function vaciarCarrito() {
+        
       // Limpiamos los productos guardados
       const carrito = [];
       // Renderizamos los cambios
      
       // Borra LocalStorage
       localStorage.clear();
+      
     }
-  
+
+    const botonFinalizar = document.querySelector('.btnFinalizar');
+    botonFinalizar.addEventListener('click', finalizarCompra);
+
+    function finalizarCompra(){
+        Swal.fire({
+        title: 'Gracias!',
+        text: 'Tu compra ha sido realizada con éxito, muchas gracias por confiar en nosotros! El total de su compra es de $' + precioTotalVenta + ' pesos.',
+        imageUrl: '../img/Alma gesell.gif',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'logo pagina',
+      })
+    }
