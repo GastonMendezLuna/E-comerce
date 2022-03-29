@@ -1,0 +1,66 @@
+[ 
+    {
+        
+    "id": 1,
+    "nombre": "Cesto mimbre",
+    "stock": 10,
+    "precio": 2700,
+    "categoria": "mimbre",
+    "img": "../img/card1.png"
+    },
+    {
+        
+    "id": 2,
+    "nombre": "Bolso rustico",
+    "stock": 10,
+    "precio": 2250,
+    "categoria": "tejido",
+    "img": "../img/card2.png"
+    },
+    {
+        
+    "id": 3,
+    "nombre": "Atrapa sueños",
+    "stock": 10,
+    "precio": 1800,
+    "categoria": "macrame",
+    "img": "../img/card3.png"
+    },
+    {
+        
+    "id": 4,
+    "nombre": "Cuadro tres partes",
+    "stock": 10,
+    "precio": 2700,
+    "categoria": "cuadro",
+    "img": "../img/card4.png"
+    },
+    {
+        
+    "id": 5,
+    "nombre": "Pulsera macrame",
+    "stock": 10,
+    "precio": 500,
+    "categoria": "macrame",
+    "img": "../img/card5.png"
+    },
+    {
+        
+    "id": 6,
+    "nombre": "Centro de mesa",
+    "stock": 10,
+    "precio": 2500,
+    "categoria": "mimbre",
+    "img": "../img/card6.png"
+    },
+    {
+        
+    "id": 7,
+    "nombre": "Cuadro naturaleza",
+    "stock": 10,
+    "precio": 4700,
+    "categoria": "cuadro",
+    "img": "../img/card7.png"
+    }
+]
+

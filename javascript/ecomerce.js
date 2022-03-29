@@ -1,12 +1,9 @@
 $("#menuHamburguesa").click(function () {
-    $(".menuResponsive").toggle(370).addclass(".mostrar");
+    $(".menuResponsive").toggle(330).addclass(".mostrar");
   });
   
   
-  
-  
-  
-  
+   
   class Producto{
   
     constructor(idValor, nombreValor, stockValor, precioValor, categoriaValor, imgValor){
@@ -19,35 +16,28 @@ $("#menuHamburguesa").click(function () {
   
     this.venta = function (cantidadComprada){
     this.stock -= cantidadComprada
-    console.log( 'Se vendieron'+ cantidadComprada + ' ' + ' ' + this.nombre)
+    console.log( 'Se vendieron '+ cantidadComprada + ' ' + ' ' + this.nombre)
     }
     this.faltaStock = function(cantidadComprada){
     this.stock < cantidadComprada
     alert('No tenemos mas unidades, tenemos hasta 10 '  + this.nombre)
     }
-    this.stockSuficiente = function(stock, precio, cantidadComprada){
-    stock -= cantidadComprada;
-    montoApagar += cantidadComprada * precio;
-    console.log( 'Te quedan en stock '  + stock + ' ' + this.nombre);
-    }
+    
     }
   }
     
-    const productoA = new Producto(1, 'Cesto mimbre', 10, 2700, 'mimbre', "../img/card1.png")
-    
-    const productoB = new Producto(2, 'Bolso rustico', 10, 2250, 'tejido', "../img/card2.png")
-    
-    const productoC = new Producto(3, 'Atrapa sueños', 10, 1800, 'macrame', "../img/card3.png")
-    
-    const productoD = new Producto(4, 'Cuadro tres partes', 10, 2700, 'cuadro', "../img/card4.png")
-    
-    const productoE = new Producto(5, 'Pulsera macrame', 10, 500, 'macrame', "../img/card5.png")
-    
-    const productoF = new Producto(6, 'Centro de mesa', 10, 2500, 'mimbre', "../img/card6.png")
-    
-    const productoG = new Producto(7, 'Cuadro naturaleza', 10, 4700, 'cuadro', "../img/card7.png")
-    
-    const listaProductos = [productoA, productoB, productoC, productoD, productoE, productoF, productoG]
+
+    const listaProductosB = [];
+
+  fetch('../data.json')
+  .then((resp) => resp.json())
+  .then((data) => data.forEach((producto) => listaProductosB.push(new Producto(producto.id, producto.nombre, producto.stock, producto.precio, producto.categoria, producto.img))))
+
+  
+console.log(listaProductosB)
+  
+
+
     
     let tarjetas = document.querySelector ('.tarjetas')
   
@@ -59,7 +49,7 @@ $("#menuHamburguesa").click(function () {
   
     function menorPrecio(){
   
-      const menorPrecio = listaProductos.filter(producto => producto.precio <= 1500);
+      const menorPrecio = listaProductosB.filter(producto => producto.precio <= 1500);
        
       tarjetas.innerHTML= ''
   
@@ -92,7 +82,7 @@ $("#menuHamburguesa").click(function () {
   
     function precioMedio(){
   
-      const precioMedio = listaProductos.filter(producto => producto.precio <= 4000);
+      const precioMedio = listaProductosB.filter(producto => producto.precio <= 4000);
       
       tarjetas.innerHTML= ''
   
@@ -123,7 +113,7 @@ $("#menuHamburguesa").click(function () {
   
     function mayorPrecio(){
   
-      const mayorPrecio = listaProductos.filter(producto => producto.precio >= 4001);
+      const mayorPrecio = listaProductosB.filter(producto => producto.precio >= 4001);
   
       tarjetas.innerHTML= ''
   
@@ -155,7 +145,7 @@ $("#menuHamburguesa").click(function () {
   
     function categoriaMimbre(){
   
-      const categoriaMimbre = listaProductos.filter(producto => producto.categoria == 'mimbre');
+      const categoriaMimbre = listaProductosB.filter(producto => producto.categoria == 'mimbre');
   
       tarjetas.innerHTML= ''
       
@@ -185,7 +175,7 @@ $("#menuHamburguesa").click(function () {
     boton5.addEventListener('click', categoriaTejido)
   
     function categoriaTejido(){
-      const categoriaTejido = listaProductos.filter(producto => producto.categoria == 'tejido');
+      const categoriaTejido = listaProductosB.filter(producto => producto.categoria == 'tejido');
   
       tarjetas.innerHTML= ''
   
@@ -215,7 +205,7 @@ $("#menuHamburguesa").click(function () {
     boton6.addEventListener('click', categoriaMacrame)
   
     function categoriaMacrame(){
-      const categoriaMacrame = listaProductos.filter(producto => producto.categoria == 'macrame');
+      const categoriaMacrame = listaProductosB.filter(producto => producto.categoria == 'macrame');
   
       tarjetas.innerHTML= ''
       
@@ -245,7 +235,7 @@ $("#menuHamburguesa").click(function () {
     boton7.addEventListener('click', categoriaCuadro)
   
     function categoriaCuadro(){
-      const categoriaCuadro = listaProductos.filter(producto => producto.categoria == 'cuadro');
+      const categoriaCuadro = listaProductosB.filter(producto => producto.categoria == 'cuadro');
   
       tarjetas.innerHTML= ''
       
@@ -275,7 +265,7 @@ $("#menuHamburguesa").click(function () {
     boton8.addEventListener('click', renderProductos)
   
     function renderProductos(){
-      const renderProductos = listaProductos.filter(producto => producto.precio >= 1);
+      const renderProductos = listaProductosB.filter(producto => producto.precio >= 1);
   
       tarjetas.innerHTML= ''
   
@@ -306,17 +296,18 @@ $("#menuHamburguesa").click(function () {
     
     
     const carrito = [];
+
     
     function mostrarProductos() {
       let catalogo = document.querySelector(".tarjetas");
       catalogo.innerHTML = "";
     
-      for (const producto of listaProductos) {
+      for (const producto of listaProductosB) {
         let contenedor = document.createElement("div");
     
         
         contenedor.innerHTML = `
-            <div class="card">
+              <div class="card">
               <img class="imagen" src="${producto.img}"/>
               <div class="encuadrarTexto">
               <h3>${producto.nombre}</h3>
@@ -325,26 +316,26 @@ $("#menuHamburguesa").click(function () {
               <div id="buttons"><button  id="btn" class="botonTarjeta" id="boton${producto.id}" onclick="addToCart(${producto.precio},${producto.id},${producto.stock})"><span>Comprame!</span></button></div>
                       </div>
             </div>
-                            `
-  
-  
-        ;
+                            `;
         
         catalogo.appendChild(contenedor);
+        
       }
     }
     
     function addToCart(precio, id, stock) {
-      for (Producto of listaProductos) {
+      for (Producto of listaProductosB) {
         if (Producto.id === id) {
           if (stock > 0) {
             carrito.push(precio);
             Producto.venta(1);
-    
+            
             precioTotalVenta = carrito.reduce((partialSum, a) => partialSum + a, 0);
             saveInLocalStorage();
             vistaTotal();
             mostrarProductos();
+            
+            
           } else {
             faltaStock(Producto);
           }
@@ -372,6 +363,9 @@ $("#menuHamburguesa").click(function () {
       })
     }
     
+
+    
+    
     
     function vistaTotal() {
       
@@ -393,7 +387,7 @@ $("#menuHamburguesa").click(function () {
     vistaTotal();
     vaciarCarrito();
     
-    console.log(carrito);
+   
   
   
     botonVaciar.addEventListener('click', vaciarCarrito);
@@ -422,3 +416,4 @@ $("#menuHamburguesa").click(function () {
         imageAlt: 'logo pagina',
       })
     }
+ 
