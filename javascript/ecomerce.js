@@ -413,7 +413,7 @@ function finalizarCompra() {
     text:
       "Tu compra ha sido realizada con éxito, muchas gracias por confiar en nosotros! El total de su compra es de $" +
       precioTotalVenta +
-      " pesos.",
+      " pesos. Namaste",
     imageUrl: "../img/Alma gesell.gif",
     imageWidth: 400,
     imageHeight: 200,
