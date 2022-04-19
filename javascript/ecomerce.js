@@ -408,7 +408,6 @@ const botonFinalizar = document.querySelector(".btnFinalizar");
 botonFinalizar.addEventListener("click", finalizarCompra);
 
 function finalizarCompra() {
-  clearStorage();
   Swal.fire({
     title: "Muchas gracias!",
     text:
@@ -420,6 +419,7 @@ function finalizarCompra() {
     imageHeight: 200,
     imageAlt: "logo pagina",
   });
+  clearStorage();
 }
 
 mostrarProductos();
