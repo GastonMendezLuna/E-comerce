@@ -329,7 +329,7 @@ function mostrarProductos() {
 		// contenedor.onclick = () => addToCart(producto);
 		catalogo.appendChild(contenedor);
 	}
-	vaciarCarro();
+	vaciarCarrito();
 }
   
   function addToCart(precio, id, stock) {
@@ -343,6 +343,7 @@ function mostrarProductos() {
           saveInLocalStorage();
           vistaTotal();
           mostrarProductos();
+          textos("Agregaste '" + Producto.nombre + "' al carro");
         } else {
           faltaStock(Producto);
         }
@@ -372,20 +373,20 @@ function mostrarProductos() {
     inputPrecio.appendChild(contenedor);
     Swal.fire({
       icon: 'error',
-      title: 'Oops...',
+      title: 'Lo sentimos!',
       text: 'No tenemos mas stock del producto seleccionado',
       footer: '<a href="https://shortest.link/2SXx">Además hacemos diseños a pedido, escribinos a nuestro Whatsapp</a>'
     })
   }
 
-
+  let totalDelStorage = localStorage.getItem("precio_carrito");
+  let inputPrecio = document.querySelector(".total");
   function vistaTotal() {
     
-    let totalDelStorage = localStorage.getItem("precio_carrito");
-    totalDelStorage = parseInt(totalDelStorage); //no uso el JSON.parse porque es para objetos. parseo de string a int
-    console.log(totalDelStorage); //vale igual que precioTotalVenta
+    
+    totalDelStorage = parseInt(totalDelStorage); 
+    console.log(totalDelStorage); 
   
-    let inputPrecio = document.querySelector(".total");
     inputPrecio.innerHTML = "";
   
     let contenedor = document.createElement("div");
@@ -396,28 +397,39 @@ function mostrarProductos() {
   }
   
   
-  vistaTotal();
-  /* vaciarCarrito(); */
-  mostrarProductos();
-  console.log(carrito);
+ 
+  function clearStorage() {
+	console.log("Storage vaciado");
+	localStorage.clear();
+  carrito = [];
+	vistaTotal();
+	textos("Vaciaste el carro!");
+}
 
-  const botonVaciar = document.querySelector('.btnVaciar');
-  botonVaciar.addEventListener('click', vaciarCarro);
+function vaciarCarrito() {
+	const botonVaciar = document.querySelector('.btnVaciar');
+    botonVaciar.addEventListener('click', clearStorage);
 
-  function vaciarCarro() {
+}
+ 
+  
 
-    // Limpiamos los productos guardados
-    const carrito = [];
-    // Renderizamos los cambios
-
-    // Borra LocalStorage
-    localStorage.clear();
+  function textos (text) {
+    Toastify({
+      text,
+      duration: 3000,
+      position: "center",
+      style: {
+        background: "linear-gradient(to right, #000000, #000000)"
+      }
+    }).showToast();
   }
 
   const botonFinalizar = document.querySelector('.btnFinalizar');
     botonFinalizar.addEventListener('click', finalizarCompra);
 
     function finalizarCompra(){
+      inputPrecio.innerHTML = "";
         Swal.fire({
         title: 'Gracias!',
         text: 'Tu compra ha sido realizada con éxito, muchas gracias por confiar en nosotros! El total de su compra es de $' + precioTotalVenta + ' pesos.',
@@ -427,3 +439,7 @@ function mostrarProductos() {
         imageAlt: 'logo pagina',
       })
     } 
+
+mostrarProductos();
+vistaTotal();
+
