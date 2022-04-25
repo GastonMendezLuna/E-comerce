@@ -41,3 +41,27 @@ body {
 
 
 }
+
+@media only screen and (max-width: 800px) {
+    .sobrenosotros-Container{
+        width: 100vw;
+        height: 401vh;
+        
+    
+        & .img__SobreNosotros{
+            width: 100vw;
+            height: 400.9vh;
+            top: 2px;
+            opacity:0.5;
+            filter:alpha(opacity=20);
+        
+        & .parrafo__SobreNosotros{
+           font-size: 2rem;
+           font-weight: 900;
+           color: yellow;
+        }
+    }
+}
+}
+    
+    
